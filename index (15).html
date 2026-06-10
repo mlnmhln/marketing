@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INSIGHTERS — маркетинговая система под ваш бизнес и экспертизу</title>
+<meta name="description" content="За 24 часа подготовим персональную концепцию маркетинговой системы и реализуем её одной командой: продукт, позиционирование, упаковка, привлечение клиентов и медийность.">
+<meta property="og:title" content="INSIGHTERS — маркетинговая система под ваш бизнес">
+<meta property="og:description" content="Персональная концепция за 24 часа и реализация одной командой.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23070C18'/%3E%3Cpath d='M16 6l9 5.2v9.6L16 26l-9-5.2V11.2z' fill='none' stroke='%234D69FF' stroke-width='1.6'/%3E%3Cpath d='M16 6v20M7 11.2l9 5.2 9-5.2' fill='none' stroke='%234D69FF' stroke-width='1.4' opacity='.6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap&subset=cyrillic,latin" rel="stylesheet">
+<style>
+  :root{
+    --bg:#060B16;
+    --bg-alt:#080E1C;
+    --card:#0D1424;
+    --card-2:#0F1729;
+    --line:rgba(255,255,255,.07);
+    --line-2:rgba(255,255,255,.12);
+    --accent:#4D69FF;
+    --accent-deep:#3550E8;
+    --accent-soft:rgba(77,105,255,.12);
+    --accent-text:#8094FF;
+    --text:#E7ECF6;
+    --white:#FFFFFF;
+    --muted:#9098AB;
+    --muted-2:#6A7184;
+    --radius:18px;
+    --radius-sm:13px;
+    --maxw:1240px;
+    --pad:24px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Manrope',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+    font-size:15px;line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  ul{list-style:none}
+
+  .container{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad)}
+  .section{padding:104px 0;position:relative}
+  .section--alt{background:var(--bg-alt)}
+  section[id]{scroll-margin-top:88px}
+
+  .accent{color:var(--accent-text)}
+  .eyebrow{
+    display:inline-block;font-size:0.78rem;font-weight:700;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--accent-text);margin-bottom:20px;
+  }
+  h1,h2,h3{color:var(--white);line-height:1.08;font-weight:800;letter-spacing:-.01em;overflow-wrap:break-word}
+  p{overflow-wrap:break-word}
+  h2{font-size:clamp(1.61rem,2.95vw,2.4rem);margin-bottom:18px}
+  .section-head{max-width:760px;margin:0 auto 56px;text-align:center}
+  .section-head.left{margin-left:0;text-align:left}
+  .lead{color:var(--muted);font-size:0.98rem}
+
+  /* buttons */
+  .btn{
+    display:inline-flex;align-items:center;gap:12px;cursor:pointer;border:none;
+    font-family:inherit;font-weight:700;font-size:0.91rem;border-radius:13px;
+    padding:17px 28px;transition:transform .18s ease,box-shadow .18s ease,background .18s ease;
+  }
+  .btn-primary{
+    background:linear-gradient(135deg,var(--accent) 0%,var(--accent-deep) 100%);
+    color:#fff;box-shadow:0 14px 36px -12px rgba(77,105,255,.65);
+  }
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 20px 46px -12px rgba(77,105,255,.8)}
+  .btn-primary svg{transition:transform .2s ease}
+  .btn-primary:hover svg{transform:translateX(4px)}
+  .btn-sm{padding:13px 22px;font-size:0.89rem;border-radius:11px}
+  .link-arrow{display:inline-flex;align-items:center;gap:9px;color:var(--accent-text);font-weight:700}
+  .link-arrow svg{transition:transform .2s ease}
+  .link-arrow:hover svg{transform:translateX(4px)}
+
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:30px;transition:border-color .2s ease,transform .2s ease,background .2s ease;
+  }
+  .card:hover{border-color:var(--line-2);background:var(--card-2)}
+  .ico{
+    width:50px;height:50px;border-radius:13px;display:flex;align-items:center;justify-content:center;
+    color:var(--accent-text);background:var(--accent-soft);border:1px solid rgba(77,105,255,.22);flex:none;
+  }
+  .ico svg{width:24px;height:24px;stroke:currentColor;stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .ico-ring{
+    width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    color:var(--accent-text);border:1.5px solid rgba(77,105,255,.45);flex:none;
+  }
+  .ico-ring svg{width:24px;height:24px;stroke:currentColor;stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}
+
+  /* ===== HEADER ===== */
+  header{
+    position:sticky;top:0;z-index:60;
+    background:rgba(6,11,22,.72);backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px;gap:24px}
+  .logo{font-weight:800;letter-spacing:.32em;font-size:1.05rem;color:#fff;padding-left:.32em}
+  .nav-links{display:flex;gap:34px;margin-left:auto}
+  .nav-links a{color:var(--muted);font-weight:600;font-size:0.92rem;transition:color .18s ease;white-space:nowrap}
+  .nav-cta.desk{white-space:nowrap}
+  .nav-links a:hover{color:#fff}
+  .nav-cta{margin-left:8px}
+  .nav-cta.mob{display:none}
+  .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;color:#fff}
+  .nav-toggle svg{width:26px;height:26px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round}
+
+  /* ===== HERO ===== */
+  .hero{padding:72px 0 64px;position:relative}
+  .hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
+  .hero h1{font-size:clamp(2.12rem,4.26vw,3.44rem);margin-bottom:26px}
+  .hero p.sub{color:var(--muted);font-size:1.03rem;max-width:520px;margin-bottom:36px}
+  .hero-tag{margin-top:28px;color:var(--muted-2);font-size:0.9rem;max-width:480px}
+  .hero-art{position:relative;container-type:inline-size}
+  .hero-art img{filter:drop-shadow(0 30px 80px rgba(40,70,220,.35));width:100%}
+  .hero-art svg{width:100%;height:auto;display:block;filter:drop-shadow(0 18px 54px rgba(40,70,220,.22));overflow:hidden;border-radius:18px}
+
+  /* ===== 3D FOLDING CUBE ===== */
+  .cube-stage{--S:120px;--h:calc(var(--S)/2);
+    position:absolute;left:50%;top:50%;width:var(--S);height:var(--S);
+    margin-left:calc(var(--S)/-2);margin-top:calc(var(--S)/-2);
+    perspective:calc(var(--S)*4.4);perspective-origin:50% 42%;pointer-events:none;z-index:2}
+  @supports (width:1cqw){.cube-stage{--S:20cqw}}
+  .cube3d{position:relative;width:var(--S);height:var(--S);transform-style:preserve-3d;
+    transform:rotateX(0deg) rotateY(0deg)}
+  .face{position:absolute;top:0;left:0;width:var(--S);height:var(--S);border-radius:6px;
+    backface-visibility:hidden;border:1px solid rgba(170,185,255,.45);
+    box-shadow:inset 0 0 22px rgba(120,140,255,.28)}
+  .fc-top{background:linear-gradient(135deg,#94A5FF,#4D69FF)}
+  .fc-front{background:linear-gradient(160deg,#4759DE,#3550E8)}
+  .fc-right{background:linear-gradient(160deg,#3550E8,#2A3CAE)}
+  .fc-left{background:linear-gradient(160deg,#33429C,#283596)}
+  .fc-back{background:#2A3CAE}
+  .fc-bottom{background:#222F8A}
+  /* base = unfolded net (flat), only front visible */
+  .fc-front{opacity:1;transform:translateZ(0)}
+  .fc-top{opacity:0;transform:translateY(-100%) rotateX(0deg) translateZ(0)}
+  .fc-bottom{opacity:0;transform:translateY(100%) rotateX(0deg) translateZ(0)}
+  .fc-left{opacity:0;transform:translateX(-100%) rotateY(0deg) translateZ(0)}
+  .fc-right{opacity:0;transform:translateX(100%) rotateY(0deg) translateZ(0)}
+  .fc-back{opacity:0;transform:translateX(200%) rotateY(0deg) translateZ(0)}
+
+  @keyframes appear{from{opacity:0}to{opacity:1}}
+  @keyframes foldFront{from{transform:translateZ(0)}to{transform:translateZ(var(--h))}}
+  @keyframes foldTop{from{transform:translateY(-100%) rotateX(0deg) translateZ(0)}to{transform:translateY(0%) rotateX(90deg) translateZ(var(--h))}}
+  @keyframes foldBottom{from{transform:translateY(100%) rotateX(0deg) translateZ(0)}to{transform:translateY(0%) rotateX(-90deg) translateZ(var(--h))}}
+  @keyframes foldLeft{from{transform:translateX(-100%) rotateY(0deg) translateZ(0)}to{transform:translateX(0%) rotateY(-90deg) translateZ(var(--h))}}
+  @keyframes foldRight{from{transform:translateX(100%) rotateY(0deg) translateZ(0)}to{transform:translateX(0%) rotateY(90deg) translateZ(var(--h))}}
+  @keyframes foldBack{from{transform:translateX(200%) rotateY(0deg) translateZ(0)}to{transform:translateX(0%) rotateY(180deg) translateZ(var(--h))}}
+  @keyframes viewRot{from{transform:rotateX(0deg) rotateY(0deg)}to{transform:rotateX(-22deg) rotateY(-32deg)}}
+  @keyframes breathe{0%{transform:rotateX(-22deg) rotateY(-32deg)}50%{transform:rotateX(-18deg) rotateY(-38deg)}100%{transform:rotateX(-22deg) rotateY(-32deg)}}
+
+  .cube-stage.run .cube3d{animation:viewRot 2.4s cubic-bezier(.5,0,.25,1) 2.6s both, breathe 7s ease-in-out 5.2s infinite}
+  .cube-stage.run .fc-front{animation:foldFront 2.4s cubic-bezier(.62,0,.3,1) 2.6s both}
+  .cube-stage.run .fc-top{animation:appear .9s ease .7s both, foldTop 2.4s cubic-bezier(.62,0,.3,1) 2.6s both}
+  .cube-stage.run .fc-bottom{animation:appear .9s ease .85s both, foldBottom 2.4s cubic-bezier(.62,0,.3,1) 2.6s both}
+  .cube-stage.run .fc-left{animation:appear .9s ease 1s both, foldLeft 2.4s cubic-bezier(.62,0,.3,1) 2.6s both}
+  .cube-stage.run .fc-right{animation:appear .9s ease 1.15s both, foldRight 2.4s cubic-bezier(.62,0,.3,1) 2.6s both}
+  .cube-stage.run .fc-back{animation:appear .9s ease 1.3s both, foldBack 2.4s cubic-bezier(.62,0,.3,1) 2.6s both}
+
+  /* assembled static state (reduced motion) */
+  .cube-stage.static .cube3d{transform:rotateX(-22deg) rotateY(-32deg)}
+  .cube-stage.static .face{opacity:1}
+  .cube-stage.static .fc-front{transform:translateZ(var(--h))}
+  .cube-stage.static .fc-back{transform:rotateY(180deg) translateZ(var(--h))}
+  .cube-stage.static .fc-right{transform:rotateY(90deg) translateZ(var(--h))}
+  .cube-stage.static .fc-left{transform:rotateY(-90deg) translateZ(var(--h))}
+  .cube-stage.static .fc-top{transform:rotateX(90deg) translateZ(var(--h))}
+  .cube-stage.static .fc-bottom{transform:rotateX(-90deg) translateZ(var(--h))}
+  .clients{margin-top:74px;border-top:1px solid var(--line);padding-top:30px;
+    display:flex;align-items:center;gap:40px;flex-wrap:wrap}
+  .clients span.lbl{font-size:0.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-2);font-weight:700}
+  .clients .logos{display:flex;gap:42px;flex-wrap:wrap;align-items:center}
+  .clients .logos b{color:#6a7184;opacity:.6;font-weight:800;letter-spacing:.04em;font-size:0.96rem}
+
+  /* ===== APPROACH ===== */
+  .approach-top{display:grid;grid-template-columns:1fr 2.15fr;gap:30px;align-items:start;margin-bottom:26px}
+  .approach-intro .lead{margin-bottom:24px}
+  .approach-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .approach-cards .card{padding:26px 24px}
+  .num{font-size:0.96rem;font-weight:800;color:var(--accent-text);margin-bottom:30px;font-feature-settings:"tnum"}
+  .approach-cards h3{font-size:1.12rem;margin-bottom:12px}
+  .approach-cards p{color:var(--muted);font-size:0.91rem}
+
+  .founder-row{display:grid;grid-template-columns:1.35fr 1fr;gap:20px;margin-top:20px}
+  .founder-card{display:grid;grid-template-columns:.85fr 1.3fr;gap:0;overflow:hidden;padding:0}
+  .founder-card .photo{background:#0a0f1c}
+  .founder-card .photo img{height:100%;width:100%;object-fit:cover}
+  .founder-card .info{padding:34px}
+  .founder-card .info .role{font-size:0.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted-2);font-weight:700;margin-bottom:14px}
+  .founder-card .info h3{font-size:1.36rem;margin-bottom:16px}
+  .founder-card .info p{color:var(--muted);font-size:0.92rem;margin-bottom:14px}
+  .stats-card{padding:38px 40px}
+  .stats-card h3{font-size:1.16rem;margin-bottom:28px}
+  .stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px 36px}
+  .stat .big{font-size:clamp(2.04rem,2.87vw,2.56rem);font-weight:800;color:#fff;line-height:1}
+  .stat .lbl{color:var(--muted);font-size:0.9rem;margin-top:8px}
+
+  /* ===== CONCEPT ===== */
+  .concept-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+  .concept-grid h2{font-size:clamp(1.7rem,3.28vw,2.56rem)}
+  .concept-grid .lead{margin-top:22px}
+  .concept-grid .lead+.lead{margin-top:18px;color:var(--muted-2);font-size:0.91rem}
+  .concept-list li{display:flex;align-items:center;gap:18px;padding:18px 0;border-bottom:1px solid var(--line);color:var(--text);font-size:0.96rem}
+  .concept-list li:first-child{padding-top:0}
+  .concept-list .ic{width:40px;color:var(--accent-text);flex:none}
+  .concept-list .ic svg{width:26px;height:26px;stroke:currentColor;stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .concept-cta{margin-top:46px;text-align:center}
+  .concept-note{display:flex;gap:14px;align-items:center;justify-content:center;margin-top:34px;color:var(--muted);font-size:0.92rem;max-width:560px;margin-left:auto;margin-right:auto}
+  .concept-note .ic{color:var(--accent-text);flex:none}
+  .concept-note .ic svg{width:30px;height:30px;stroke:currentColor;stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round}
+
+  /* ===== PROCESS RADIAL ===== */
+  .process-wrap{position:relative;max-width:1000px;margin:0 auto}
+  .process-grid{display:grid;grid-template-columns:1fr 280px 1fr;grid-template-rows:auto auto auto;
+    gap:26px 40px;align-items:center;position:relative;z-index:2}
+  .pcell{align-self:center}
+  .process-grid>*:nth-child(1){grid-column:1;grid-row:1}
+  .process-grid>*:nth-child(2){grid-column:3;grid-row:1}
+  .process-grid>*:nth-child(3){grid-column:2;grid-row:2}
+  .process-grid>*:nth-child(4){grid-column:1;grid-row:2}
+  .process-grid>*:nth-child(5){grid-column:3;grid-row:2}
+  .process-grid>*:nth-child(6){grid-column:1;grid-row:3}
+  .process-grid>*:nth-child(7){grid-column:3;grid-row:3}
+  .pcube{display:flex;align-items:center;justify-content:center;position:relative;min-height:280px}
+  .pcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 24px}
+  .pcard h3{font-size:1.07rem;margin-bottom:8px}
+  .pcard p{color:var(--muted);font-size:0.9rem}
+  /* cards appear out of their dot, staggered */
+  .process-grid .pcell{opacity:0;transform:scale(.35);transition:opacity .45s ease,transform .6s cubic-bezier(.2,.75,.3,1)}
+  .process-grid .pcell.in{opacity:1;transform:scale(1)}
+  .process-grid>.pcell:nth-child(1){transform-origin:right bottom;transition-delay:.15s}
+  .process-grid>.pcell:nth-child(2){transform-origin:left bottom;transition-delay:.3s}
+  .process-grid>.pcell:nth-child(4){transform-origin:right center;transition-delay:.45s}
+  .process-grid>.pcell:nth-child(5){transform-origin:left center;transition-delay:.6s}
+  .process-grid>.pcell:nth-child(6){transform-origin:right top;transition-delay:.75s}
+  .process-grid>.pcell:nth-child(7){transform-origin:left top;transition-delay:.9s}
+  .rings{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:760px;height:560px;z-index:1;pointer-events:none;opacity:.6}
+  .cube-svg{width:170px;height:190px;filter:drop-shadow(0 0 40px rgba(77,105,255,.6))}
+
+  /* ===== SITUATION ===== */
+  .sit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .sit-grid .card{padding:30px 28px}
+  .sit-grid h3{font-size:1.07rem;margin:22px 0 14px;line-height:1.25}
+  .sit-grid .ico{margin-bottom:20px}
+  .sit-grid p{color:var(--text);font-size:0.95rem;line-height:1.5}
+  .sit-foot{text-align:center;max-width:880px;margin:52px auto 0;font-size:1.03rem;color:var(--text);line-height:1.5}
+  .sit-cta{text-align:center;margin-top:40px}
+
+  /* ===== SOLUTION ===== */
+  .solution-card{display:grid;grid-template-columns:1fr 1fr;gap:0;padding:0;overflow:hidden}
+  .solution-card .l{padding:60px 56px;display:flex;align-items:center}
+  .solution-card .l h2{font-size:clamp(1.44rem,2.3vw,1.92rem);margin:0;line-height:1.25}
+  .solution-card .r{padding:48px 56px;border-left:1px solid var(--line)}
+  .solution-list li{display:flex;align-items:center;gap:20px;padding:20px 0;border-bottom:1px solid var(--line);font-size:1.02rem;color:#fff;font-weight:500}
+  .solution-list li:last-child{border-bottom:none}
+  .sol-ic{width:48px;height:48px;border-radius:50%;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;color:var(--accent-text);flex:none}
+  .sol-ic svg{width:22px;height:22px;stroke:currentColor;stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}
+
+  /* ===== SERVICES ===== */
+  .serv-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .serv-grid .card{padding:32px 28px}
+  .serv-head{display:flex;align-items:center;gap:16px;padding-bottom:20px;margin-bottom:22px;border-bottom:1px solid var(--line)}
+  .serv-head h3{font-size:1.12rem}
+  .serv-grid ul li{position:relative;padding-left:22px;color:var(--muted);font-size:0.92rem;margin-bottom:16px}
+  .serv-grid ul li:last-child{margin-bottom:0}
+  .serv-grid ul li::before{content:"";position:absolute;left:0;top:.6em;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+  .serv-cta{text-align:center;margin-top:46px}
+  .serv-note{text-align:center;max-width:760px;margin:30px auto 0;color:var(--muted);font-size:0.92rem}
+
+  /* ===== CASES ===== */
+  /* animated wave behind cases header */
+  #cases{position:relative;overflow:hidden}
+  #cases>.container{position:relative;z-index:1}
+  .cases-wave{position:absolute;top:0;left:0;width:100%;height:clamp(180px,26vw,280px);overflow:hidden;pointer-events:none;z-index:0;opacity:.6;
+    -webkit-mask:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent);mask:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent)}
+  .cases-wave svg{position:absolute;top:0;left:0;width:200%;height:100%;animation:waveFlow 16s linear infinite;filter:drop-shadow(0 4px 18px rgba(60,90,230,.3))}
+  @keyframes waveFlow{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+  .cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .case .case-top{display:flex;gap:16px;align-items:flex-start;margin-bottom:26px}
+  .case .cnum{font-size:0.9rem;font-weight:800;color:var(--accent-text);border:1px solid var(--line-2);border-radius:9px;padding:6px 10px;flex:none}
+  .case h3{font-size:1.16rem;margin-bottom:6px}
+  .case .ctag{color:var(--accent-text);font-size:0.88rem;line-height:1.4}
+  .case .blk-lbl{display:flex;align-items:center;gap:10px;font-size:0.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text);font-weight:700;margin:8px 0 16px}
+  .case .blk-lbl::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
+  .case ul.did li{position:relative;padding-left:20px;color:var(--muted);font-size:0.9rem;margin-bottom:11px}
+  .case ul.did li::before{content:"";position:absolute;left:0;top:.55em;width:6px;height:6px;border-radius:50%;background:var(--accent-text);opacity:.7}
+  .case .res-item{display:flex;gap:16px;align-items:center;margin-bottom:18px}
+  .case .res-item .ic{width:46px;height:46px;border-radius:11px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;color:var(--accent-text);flex:none}
+  .case .res-item .ic svg{width:22px;height:22px;stroke:currentColor;stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .case .res-item .rb{font-size:1.29rem;font-weight:800;color:#fff;line-height:1.05}
+  .case .res-item .rl{color:var(--muted);font-size:0.84rem}
+  .case hr{border:none;border-top:1px solid var(--line);margin:24px 0}
+
+  /* ===== FOUNDER (team insighters) ===== */
+  .founder2{display:grid;grid-template-columns:.85fr 1.15fr;gap:24px;align-items:stretch}
+  .founder2 .photo{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:#0a0f1c}
+  .founder2 .photo img{width:100%;height:100%;object-fit:cover}
+  .founder2 .info{padding:42px}
+  .f2-head{display:flex;gap:16px;align-items:center;margin-bottom:8px}
+  .f2-head .cnum{font-size:0.91rem;font-weight:800;color:var(--accent-text);border:1px solid var(--line-2);border-radius:9px;padding:7px 11px}
+  .f2-head h3{font-size:1.6rem}
+  .founder2 .role{color:var(--accent-text);font-weight:600;margin-bottom:20px}
+  .founder2 .bio{color:var(--muted);margin-bottom:26px;max-width:560px}
+  .f2-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:26px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:26px}
+  .f2-stats .big{font-size:1.76rem;font-weight:800;color:var(--accent-text);line-height:1}
+  .f2-stats .lbl{color:var(--muted);font-size:0.82rem;margin-top:8px}
+  .f2-resp h4{color:var(--accent-text);font-size:0.96rem;margin-bottom:16px}
+  .f2-resp li{position:relative;padding-left:34px;margin-bottom:13px;color:var(--text);font-size:0.93rem}
+  .f2-resp li svg{position:absolute;left:0;top:1px;width:22px;height:22px;stroke:var(--accent-text);stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}
+
+  /* ===== DELIVERY TEAM ===== */
+  .delivery-grid{display:grid;grid-template-columns:1.55fr 1fr;gap:24px;align-items:stretch}
+  .delivery-left{padding:40px}
+  .delivery-left h3{color:var(--accent-text);font-size:1.12rem;margin-bottom:26px}
+  .cap-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .cap{display:flex;align-items:center;gap:16px;background:var(--card-2);border:1px solid var(--line);border-radius:13px;padding:18px 20px}
+  .cap .ico{width:44px;height:44px;border-radius:11px}
+  .cap .ico svg{width:22px;height:22px}
+  .cap span{font-size:0.93rem;font-weight:500;color:#fff}
+  .delivery-right{padding:44px;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between}
+  .star-wrap{align-self:center;margin:30px auto 44px;width:200px;height:200px;position:relative;display:flex;align-items:center;justify-content:center}
+  .star-wrap svg.star{width:74px;height:74px;stroke:var(--accent-text);stroke-width:1.6;fill:none;filter:drop-shadow(0 0 24px rgba(77,105,255,.55))}
+  .delivery-right .res-lbl{color:var(--accent-text);font-weight:700;font-size:1.03rem;border-bottom:1px solid var(--line);padding-bottom:14px;width:100%;margin-bottom:18px}
+  .delivery-right p{color:var(--muted)}
+
+  /* ===== PROJECT TEAM ===== */
+  .people-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .person{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:border-color .2s ease}
+  .person:hover{border-color:var(--line-2)}
+  .person .pphoto{aspect-ratio:1/1;background:#0a0f1c;overflow:hidden}
+  .person .pphoto img{width:100%;height:100%;object-fit:cover;object-position:top center}
+  .photo-ph{
+    width:100%;height:100%;min-height:200px;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;
+    text-align:center;padding:24px;
+    background:
+      radial-gradient(120% 90% at 50% 0%,rgba(77,105,255,.10),transparent 60%),
+      linear-gradient(160deg,#0c1426,#090e1b);
+  }
+  .photo-ph svg{width:48px;height:48px;fill:none;stroke:var(--accent-text);stroke-width:1.4;opacity:.6}
+  .photo-ph .ph-name{color:var(--text);font-weight:600;font-size:0.91rem;line-height:1.2}
+  .photo-ph .ph-hint{color:var(--muted-2);font-size:0.78rem;letter-spacing:.03em}
+  .person .pbody{padding:24px}
+  .person h3{font-size:1.12rem;line-height:1.15;margin-bottom:10px}
+  .person .prole{color:var(--accent-text);font-size:0.87rem;font-weight:600;padding-bottom:18px;margin-bottom:18px;border-bottom:1px solid var(--line);min-height:62px}
+  .person h5{font-weight:700;color:#fff;font-size:0.87rem;margin-bottom:14px}
+  .person ul li{position:relative;padding-left:18px;color:var(--muted);font-size:0.85rem;margin-bottom:10px}
+  .person ul li::before{content:"";position:absolute;left:0;top:.55em;width:6px;height:6px;border-radius:50%;background:var(--accent-text);opacity:.7}
+
+  /* ===== CONTACT FORM ===== */
+  .form-card{padding:36px}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+  .badge{display:inline-block;background:var(--accent-soft);border:1px solid rgba(77,105,255,.3);color:var(--accent-text);
+    font-size:0.74rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;padding:8px 14px;border-radius:8px;margin-bottom:26px}
+  .contact-grid h2{font-size:clamp(1.61rem,2.79vw,2.16rem)}
+  .contact-divider{width:60px;height:3px;background:var(--accent);border-radius:3px;margin:24px 0 30px}
+  .contact-grid h4{color:#fff;font-size:1.05rem;margin-bottom:20px}
+  .contact-list li{position:relative;padding-left:38px;margin-bottom:16px;color:var(--text);font-size:0.91rem}
+  .contact-list li svg{position:absolute;left:0;top:0;width:24px;height:24px;stroke:var(--accent-text);stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  form .field{margin-bottom:14px}
+  form input,form textarea{
+    width:100%;background:var(--card);border:1px solid var(--line-2);border-radius:13px;
+    padding:17px 20px;color:#fff;font-family:inherit;font-size:0.91rem;transition:border-color .18s ease,background .18s ease;
+  }
+  form input::placeholder,form textarea::placeholder{color:var(--muted-2)}
+  form input:focus,form textarea:focus{outline:none;border-color:var(--accent);background:var(--card-2)}
+  form textarea{resize:vertical;min-height:96px}
+  form .btn-primary{width:100%;justify-content:center;margin-top:8px;font-size:0.98rem;padding:19px}
+  .form-note{display:flex;gap:14px;align-items:flex-start;color:var(--muted);font-size:0.85rem;padding-top:18px;margin-top:18px;border-top:1px solid var(--line)}
+  .form-note svg{width:24px;height:24px;stroke:var(--accent-text);stroke-width:1.6;fill:none;flex:none;stroke-linecap:round;stroke-linejoin:round}
+  .form-success{display:none;background:var(--accent-soft);border:1px solid rgba(77,105,255,.3);border-radius:13px;padding:20px;color:#fff;margin-bottom:14px}
+  .contact-foot{text-align:center;color:var(--muted-2);margin-top:54px;font-size:0.92rem}
+
+  /* ===== FOOTER ===== */
+  footer{border-top:1px solid var(--line);padding:44px 0;background:var(--bg-alt)}
+  .foot{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  .foot .logo{font-size:0.91rem}
+  .foot-links{display:flex;gap:28px;flex-wrap:wrap}
+  .foot-links a{color:var(--muted);font-size:0.88rem}
+  .foot-links a:hover{color:#fff}
+  .foot .cr{color:var(--muted-2);font-size:0.84rem}
+
+  /* ===== WHY / PHILOSOPHY ===== */
+  .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+  .why-left h2{margin-bottom:18px}
+  .why-left .lead{font-size:1.03rem;line-height:1.55}
+  .why-divider{width:60px;height:3px;background:var(--accent);border-radius:3px;margin:24px 0 28px}
+  .why-cards{display:flex;flex-direction:column;gap:16px}
+  .why-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:4px 26px}
+  .why-row{display:flex;gap:18px;align-items:center;padding:20px 0;border-bottom:1px solid var(--line)}
+  .why-card .why-row:last-child{border-bottom:none}
+  .why-row p{color:var(--text);font-size:0.92rem;line-height:1.5}
+  .why-right{position:relative;padding-top:4px}
+  .why-list li{display:flex;gap:18px;align-items:center;padding:20px 0;border-bottom:1px solid var(--line)}
+  .why-list li:first-child{padding-top:0}
+  .why-list li:last-child{border-bottom:none}
+  .why-list p{color:var(--text);font-size:0.96rem;line-height:1.45}
+  .why-ic{width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    color:var(--accent-text);background:var(--accent-soft);border:1px solid rgba(77,105,255,.22);flex:none}
+  .why-ic svg{width:24px;height:24px;stroke:currentColor;stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .why-wave{position:absolute;right:-10px;bottom:-30px;width:78%;max-width:420px;height:auto;pointer-events:none;
+    filter:drop-shadow(0 6px 24px rgba(60,90,230,.35));opacity:.85}
+
+  /* ===== PROCESS (how the project goes) ===== */
+  .proc-grid{display:grid;grid-template-columns:0.82fr 1.18fr;gap:60px;align-items:start}
+  .proc-intro{position:relative}
+  .proc-intro h2{margin-bottom:20px}
+  .proc-intro .lead{max-width:430px}
+  .proc-step{display:grid;grid-template-columns:0.9fr 1.4fr;grid-template-areas:"head desc";gap:24px;align-items:baseline;padding:22px 0;border-bottom:1px solid var(--line)}
+  .proc-step:first-child{padding-top:0}
+  .proc-step:last-child{border-bottom:none}
+  .proc-ic{grid-area:ic;width:54px;height:54px;border-radius:14px;display:flex;align-items:center;justify-content:center;color:var(--accent-text);background:var(--accent-soft);border:1px solid rgba(77,105,255,.22);flex:none}
+  .proc-ic svg{width:26px;height:26px;stroke:currentColor;stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .proc-h{grid-area:head}
+  .proc-num{display:block;color:var(--accent-text);font-weight:800;font-size:1.05rem;letter-spacing:.04em;margin-bottom:4px}
+  .proc-h h3{font-size:1.08rem;line-height:1.2}
+  .proc-step p{grid-area:desc;color:var(--muted);font-size:0.9rem;line-height:1.5}
+  .proc-foot{display:grid;grid-template-columns:auto 1fr auto;grid-template-areas:"ic text btn";gap:30px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px 32px;margin-top:42px}
+  .proc-foot-ic{grid-area:ic;width:54px;height:54px;border-radius:14px;display:flex;align-items:center;justify-content:center;color:var(--accent-text);background:var(--accent-soft);border:1px solid rgba(77,105,255,.22);flex:none}
+  .proc-foot-ic svg{width:26px;height:26px;fill:currentColor}
+  .proc-foot p{grid-area:text;font-size:0.96rem;line-height:1.5;color:var(--text)}
+  .proc-foot .btn{grid-area:btn}
+  .btn-ghost{background:transparent;border:1px solid rgba(77,105,255,.5);color:var(--accent-text)}
+  .btn-ghost:hover{background:var(--accent-soft);border-color:var(--accent)}
+  .proc-radial{margin-top:28px}
+  .proc-intro .process-wrap{max-width:100%;margin:0}
+  .proc-intro .process-grid{grid-template-columns:1fr 84px 1fr;gap:10px 12px}
+  .proc-intro .pcube{min-height:138px}
+  .proc-intro .cube-svg{width:74px;height:83px;filter:drop-shadow(0 0 20px rgba(77,105,255,.5))}
+  .proc-intro .pcard{padding:11px 13px;border-radius:11px}
+  .proc-intro .pcard h3{font-size:0.8rem;margin-bottom:3px}
+  .proc-intro .pcard p{font-size:0.71rem;line-height:1.34}
+  .proc-intro .rings{width:100%;height:auto;max-width:430px}
+
+  /* flip cards (situation) */
+  .sit-grid .flip{perspective:1100px;background:none;border:none;padding:0}
+  .flip-inner{position:relative;width:100%;min-height:222px;transform-style:preserve-3d;transition:transform .6s cubic-bezier(.2,.7,.3,1)}
+  .sit-grid .flip:hover .flip-inner,.sit-grid .flip:focus-within .flip-inner{transform:rotateY(180deg)}
+  .flip-face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;display:flex;flex-direction:column}
+  .flip-front .ico{margin-bottom:18px}
+  .flip-front h3{font-size:1.04rem;line-height:1.26;color:var(--white)}
+  .flip-front .flip-hint{margin-top:auto;color:var(--accent-text);font-size:0.82rem;font-weight:600}
+  .flip-back{transform:rotateY(180deg);justify-content:center;background:var(--card-2)}
+  .sit-grid .flip-back p{color:var(--muted);font-size:0.92rem;line-height:1.5}
+  @media(hover:none){
+    .sit-grid .flip{perspective:none}
+    .flip-inner{min-height:0;transform:none!important;transform-style:flat}
+    .flip-face{position:static;inset:auto;backface-visibility:visible}
+    .flip-front{border-bottom:none;border-radius:var(--radius) var(--radius) 0 0;padding-bottom:14px}
+    .flip-front .ico{margin-bottom:14px}
+    .flip-front .flip-hint{display:none}
+    .flip-back{transform:none;border-top:none;border-radius:0 0 var(--radius) var(--radius);justify-content:flex-start;background:var(--card)}
+  }
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ===== RESPONSIVE ===== */
+  @media(max-width:1080px){
+    .approach-cards,.serv-grid,.people-grid{grid-template-columns:repeat(2,1fr)}
+    .sit-grid{grid-template-columns:repeat(2,1fr)}
+    .cases-grid{grid-template-columns:1fr}
+    .nav-links,.nav-cta.desk{display:none}
+    .nav-toggle{display:block}
+    .nav.open .nav-links{
+      display:flex;flex-direction:column;position:absolute;top:74px;left:0;right:0;
+      background:var(--bg-alt);border-bottom:1px solid var(--line);padding:18px var(--pad) 26px;gap:4px;margin:0;
+    }
+    .nav.open .nav-links a{padding:12px 0}
+    .nav.open .nav-cta.mob{display:inline-flex;margin:10px var(--pad) 0}
+  }
+  @media(max-width:980px){
+    .proc-grid{grid-template-columns:1fr;gap:38px}
+    .proc-intro .process-grid{grid-template-columns:1fr;gap:12px;max-width:380px}
+    .proc-intro .cube-svg{width:100px;height:112px}
+    .proc-intro .pcard h3{font-size:0.92rem}
+    .proc-intro .pcard p{font-size:0.84rem}
+    .why-grid{grid-template-columns:1fr}
+    .why-wave{display:none}
+    .hero-grid,.concept-grid,.contact-grid,.founder2,.delivery-grid{grid-template-columns:1fr}
+    .hero-art{order:-1;max-width:520px;margin:0 auto}
+    .approach-top{grid-template-columns:1fr}
+    .founder-row{grid-template-columns:1fr}
+    .solution-card{grid-template-columns:1fr}
+    .solution-card .r{border-left:none;border-top:1px solid var(--line)}
+    .founder2 .photo{aspect-ratio:4/5;max-height:560px}
+    .process-grid{grid-template-columns:1fr;gap:16px;max-width:560px;margin:0 auto}
+    .process-grid>*:nth-child(n){grid-column:auto;grid-row:auto}
+    .process-grid .pcube{grid-column:auto;grid-row:auto;order:-1;min-height:auto;margin-bottom:8px}
+    .cube-svg{width:120px;height:134px}
+    .rings{display:none}
+    .contact-grid{gap:40px}
+  }
+  @media(max-width:640px){
+    .proc-step{grid-template-columns:1fr;grid-template-areas:"head" "desc";gap:8px;align-items:start}
+    .proc-step p{margin-top:12px}
+    .proc-foot{grid-template-columns:auto 1fr;grid-template-areas:"ic text" "btn btn";gap:18px 20px}
+    :root{--pad:18px}
+    .section{padding:64px 0}
+    .approach-cards,.serv-grid,.sit-grid,.people-grid,.cap-grid,.f2-stats,.stats-grid{grid-template-columns:1fr}
+    .process-grid{grid-template-columns:1fr}
+    .process-grid .pcube{grid-row:auto;grid-column:auto;order:-1;min-height:auto}
+    .rings{display:none}
+    .founder-card{grid-template-columns:1fr}
+    .founder-card .photo{aspect-ratio:3/2;max-height:300px}
+    .founder2 .info{padding:30px 24px}
+    .delivery-left,.delivery-right{padding:30px 24px}
+    .solution-card .l,.solution-card .r{padding:34px 26px}
+    .stats-card{padding:32px 26px}
+    .hero h1{font-size:1.84rem}
+    .clients{flex-direction:column;align-items:flex-start;gap:18px}
+    .clients .logos{gap:26px}
+    .f2-head h3{font-size:1.36rem}
+    .sit-foot{font-size:0.98rem}
+    .person .prole{min-height:0}
+    .cube-stage{--S:26cqw}
+  }
+  @media(max-width:480px){
+    :root{--pad:16px}
+    .section{padding:50px 0}
+    .hero{padding:44px 0 50px}
+    .hero h1{font-size:1.56rem;margin-bottom:18px}
+    .hero p.sub{font-size:0.92rem;margin-bottom:26px}
+    .hero-tag{font-size:0.85rem;margin-top:22px}
+    .clients{margin-top:44px}
+    .clients .logos{gap:20px}
+    .clients .logos b{font-size:0.85rem}
+    h2{font-size:1.28rem}
+    .section-head{margin-bottom:36px}
+    .lead{font-size:0.91rem}
+    .btn{width:100%;justify-content:center;padding:16px 18px;font-size:0.92rem}
+    .approach-cards .card,.serv-grid .card,.sit-grid .card,.card{padding:24px 20px}
+    .founder-card .info,.founder2 .info,.stats-card,.delivery-left,.delivery-right,.solution-card .l,.solution-card .r{padding:24px 20px}
+    .contact-grid .card{padding:24px 20px}
+    .f2-head h3{font-size:1.29rem}
+    .f2-stats .big{font-size:1.52rem}
+    .stat .big{font-size:1.76rem}
+    .case h3{font-size:1.03rem}
+    .case .res-item .rb{font-size:1.12rem}
+    .sit-foot{font-size:0.93rem;margin-top:40px}
+    .star-wrap{width:150px;height:150px;margin:16px auto 28px}
+    .star-wrap svg.star{width:58px;height:58px}
+    .foot{flex-direction:column;align-items:flex-start;gap:18px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{scroll-behavior:auto}
+    .reveal{transition:none;opacity:1;transform:none}
+    .process-grid .pcell{transition:none;opacity:1;transform:none}
+    .cases-wave svg{animation:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="container">
+    <nav class="nav" id="nav">
+      <a href="#top" class="logo">INSIGHTERS</a>
+      <ul class="nav-links">
+        <li><a href="#team">О нас</a></li>
+        <li><a href="#approach">Подход</a></li>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#cases">Кейсы</a></li>
+        <li><a href="#concept">Концепция</a></li>
+        <li class="nav-cta mob"><a href="#contact" class="btn btn-primary btn-sm">Получить концепцию за 24 часа</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-primary btn-sm nav-cta desk">Получить концепцию за 24 часа</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Меню">
+        <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== 1. HERO ===== -->
+<section id="top" class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="reveal">
+        <h1>Соберём маркетинговую систему <span class="accent">под ваш бизнес и экспертизу</span></h1>
+        <p class="sub">За 24 часа подготовим персональную концепцию, а затем реализуем её: пересоберём продукт и позиционирование, создадим посадочную страницу, запустим привлечение клиентов и медийное продвижение.</p>
+        <a href="#contact" class="btn btn-primary">Получить концепцию за 24 часа
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <p class="hero-tag">Для предпринимателей, экспертов и компаний, которым нужна единая команда для стратегии и реализации маркетинга.</p>
+      </div>
+      <div class="hero-art reveal">
+        <svg id="heroAnim" viewBox="0 0 700 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Маркетинговая система: стратегия, привлечение клиентов, продукт, посадочные страницы, медийное продвижение">
+          <defs>
+            <linearGradient id="gTop" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8EA0FF"/><stop offset="1" stop-color="#4D69FF"/></linearGradient>
+            <linearGradient id="gRight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4257D8"/><stop offset="1" stop-color="#2B3DB0"/></linearGradient>
+            <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#6E86FF" stop-opacity=".6"/><stop offset="60%" stop-color="#3550E8" stop-opacity=".18"/><stop offset="100%" stop-color="#3550E8" stop-opacity="0"/></radialGradient>
+            <radialGradient id="gridMaskGrad" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff"/><stop offset="55%" stop-color="#fff" stop-opacity=".7"/><stop offset="100%" stop-color="#000"/></radialGradient>
+            <mask id="gridFade"><rect x="0" y="80" width="700" height="470" fill="url(#gridMaskGrad)"/></mask>
+            <filter id="soft" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="3.2"/></filter>
+            <filter id="softBig" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="7"/></filter>
+          </defs>
+          <g mask="url(#gridFade)">
+            <g stroke="#6478E6" stroke-width=".8" opacity=".16" fill="none"><line x1="374" y1="54" x2="676" y2="205"/><line x1="310" y1="62" x2="676" y2="245"/><line x1="270" y1="82" x2="676" y2="285"/><line x1="230" y1="102" x2="676" y2="325"/><line x1="190" y1="122" x2="676" y2="365"/><line x1="150" y1="142" x2="676" y2="405"/><line x1="110" y1="162" x2="670" y2="442"/><line x1="70" y1="182" x2="630" y2="462"/><line x1="30" y1="202" x2="590" y2="482"/><line x1="24" y1="239" x2="550" y2="502"/><line x1="24" y1="279" x2="510" y2="522"/><line x1="24" y1="319" x2="470" y2="542"/><line x1="24" y1="359" x2="418" y2="556"/><line x1="24" y1="399" x2="338" y2="556"/><line x1="24" y1="439" x2="258" y2="556"/><line x1="326" y1="54" x2="24" y2="205"/><line x1="390" y1="62" x2="24" y2="245"/><line x1="430" y1="82" x2="24" y2="285"/><line x1="470" y1="102" x2="24" y2="325"/><line x1="510" y1="122" x2="24" y2="365"/><line x1="550" y1="142" x2="24" y2="405"/><line x1="590" y1="162" x2="30" y2="442"/><line x1="630" y1="182" x2="70" y2="462"/><line x1="670" y1="202" x2="110" y2="482"/><line x1="676" y1="239" x2="150" y2="502"/><line x1="676" y1="279" x2="190" y2="522"/><line x1="676" y1="319" x2="230" y2="542"/><line x1="676" y1="359" x2="282" y2="556"/><line x1="676" y1="399" x2="362" y2="556"/><line x1="676" y1="439" x2="442" y2="556"/></g>
+            <g><circle cx="270" cy="242" r="3.1" fill="#9DB0FF" opacity="0.9"/><circle cx="430" cy="242" r="2.1" fill="#9DB0FF" opacity="0.5"/><circle cx="510" cy="322" r="2.1" fill="#9DB0FF" opacity="0.5"/><circle cx="430" cy="402" r="3.1" fill="#9DB0FF" opacity="0.9"/><circle cx="270" cy="402" r="2.1" fill="#9DB0FF" opacity="0.5"/><circle cx="190" cy="322" r="2.1" fill="#9DB0FF" opacity="0.5"/><circle cx="190" cy="242" r="3.1" fill="#9DB0FF" opacity="0.9"/><circle cx="510" cy="402" r="2.1" fill="#9DB0FF" opacity="0.5"/><circle cx="510" cy="242" r="2.1" fill="#9DB0FF" opacity="0.5"/><circle cx="190" cy="402" r="3.1" fill="#9DB0FF" opacity="0.9"/><circle cx="350" cy="242" r="2.1" fill="#9DB0FF" opacity="0.5"/><circle cx="350" cy="402" r="2.1" fill="#9DB0FF" opacity="0.5"/><circle cx="110" cy="242" r="3.1" fill="#9DB0FF" opacity="0.9"/><circle cx="590" cy="402" r="2.1" fill="#9DB0FF" opacity="0.5"/></g>
+          </g>
+          <g stroke="#7286F0" stroke-width="1.2" opacity=".22" fill="none" stroke-linecap="round">
+            <line x1="210" y1="175" x2="350" y2="305"/>
+            <line x1="455" y1="140" x2="350" y2="305"/>
+            <line x1="548" y1="255" x2="350" y2="305"/>
+            <line x1="470" y1="432" x2="350" y2="305"/>
+            <line x1="165" y1="415" x2="350" y2="305"/>
+          </g>
+          <g fill="none" stroke="#8094FF" stroke-width="1.3" opacity=".5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="150,150 198,150 210,175"/>
+            <polyline points="455,80 455,120 455,140"/>
+            <polyline points="548,255 540,250 548,255"/>
+            <polyline points="500,498 482,470 470,432"/>
+            <polyline points="132,452 160,452 165,415"/>
+          </g>
+          <g fill="#9DB0FF">
+            <circle cx="210" cy="175" r="3.4"/>
+            <circle cx="455" cy="140" r="3.4"/>
+            <circle cx="548" cy="255" r="3.4"/>
+            <circle cx="470" cy="432" r="3.4"/>
+            <circle cx="165" cy="415" r="3.4"/>
+          </g>
+          <g fill="#8E9DDB" font-family="Manrope, sans-serif" font-size="15.5" font-weight="600">
+            <text x="36" y="126" text-anchor="start"><tspan x="36" dy="0">Стратегия</tspan><tspan x="36" dy="20">и позиционирование</tspan></text>
+            <text x="455" y="50" text-anchor="middle"><tspan x="455" dy="0">Привлечение</tspan><tspan x="455" dy="20">клиентов</tspan></text>
+            <text x="562" y="242" text-anchor="start"><tspan x="562" dy="0">Продукт</tspan><tspan x="562" dy="20">и упаковка</tspan></text>
+            <text x="506" y="500" text-anchor="start"><tspan x="506" dy="0">Посадочные</tspan><tspan x="506" dy="20">страницы</tspan></text>
+            <text x="26" y="452" text-anchor="start"><tspan x="26" dy="0">Медийное</tspan><tspan x="26" dy="20">продвижение</tspan></text>
+          </g>
+          <ellipse cx="350" cy="350" rx="120" ry="58" fill="url(#coreGlow)" filter="url(#softBig)" opacity=".28">
+            <animate attributeName="opacity" begin="2.6s" dur="2.6s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".25 .6 .3 1" values=".28;.95"/>
+          </ellipse>
+          <g>
+            <g opacity="0">
+              <circle r="6.5" fill="#6E86FF" opacity=".5" filter="url(#soft)"/>
+              <circle r="3" fill="#EAF0FF"/>
+              <animateMotion dur="2.6s" begin="0s" fill="freeze" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.82;1" path="M210,175 L350,305"/>
+              <animate attributeName="opacity" dur="2.6s" begin="0s" fill="freeze" keyTimes="0;0.08;0.74;0.9;1" values="0;1;1;0;0"/>
+            </g>
+            <g opacity="0">
+              <circle r="6.5" fill="#6E86FF" opacity=".5" filter="url(#soft)"/>
+              <circle r="3" fill="#EAF0FF"/>
+              <animateMotion dur="2.6s" begin="0.7s" fill="freeze" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.82;1" path="M210,175 L350,305"/>
+              <animate attributeName="opacity" dur="2.6s" begin="0.7s" fill="freeze" keyTimes="0;0.08;0.74;0.9;1" values="0;1;1;0;0"/>
+            </g>
+            <g opacity="0">
+              <circle r="6.5" fill="#6E86FF" opacity=".5" filter="url(#soft)"/>
+              <circle r="3" fill="#EAF0FF"/>
+              <animateMotion dur="2.6s" begin="1.4s" fill="freeze" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.82;1" path="M210,175 L350,305"/>
+              <animate attributeName="opacity" dur="2.6s" begin="1.4s" fill="freeze" keyTimes="0;0.08;0.74;0.9;1" values="0;1;1;0;0"/>
+            </g>
+            <g opacity="0">
+              <circle r="6.5" fill="#6E86FF" opacity=".5" filter="url(#soft)"/>
+              <circle r="3" fill="#EAF0FF"/>
+              <animateMotion dur="2.6s" begin="0s" fill="freeze" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.82;1" path="M455,140 L350,305"/>
+              <animate attributeName="opacity" dur="2.6s" begin="0s" fill="freeze" keyTimes="0;0.08;0.74;0.9;1" values="0;1;1;0;0"/>
+            </g>
+            <g opacity="0">
+              <circle r="6.5" fill="#6E86FF" opacity=".5" filter="url(#soft)"/>
+              <circle r="3" fill="#EAF0FF"/>
+              <animateMotion dur="2.6s" begin="0.7s" fill="freeze" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.82;1" path="M455,140 L350,305"/>
+              <animate attributeName="opacity" dur="2.6s" begin="0.7s" fill="freeze" keyTimes="0;0.08;0.74;0.9;1" values="0;1;1;0;0"/>
+            </g>
+            <g opacity="0">
+              <circle r="6.5" fill="#6E86FF" opacity=".5" filter="url(#soft)"/>
+              <circle r="3" fill="#EAF0FF"/>
+              <animateMotion dur="2.6s" begin="1.4s" fill="freeze" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.82;1" path="M455,140 L350,305"/>
+              <animate attributeName="opacity" dur="2.6s" begin="1.4s" fill="freeze" keyTimes="0;0.08;0.74;0.9;1" values="0;1;1;0;0"/>
+            </g>
+            <g opacity="0">
+              <circle r="6.5" fill="#6E86FF" opacity=".5" filter="url(#soft)"/>
+              <circle r="3" fill="#EAF0FF"/>
+              <animateMotion dur="2.6s" begin="0s" fill="freeze" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.82;1" path="M548,255 L350,305"/>
+              <animate attributeName="opacity" dur="2.6s" begin="0s" fill="freeze" keyTimes="0;0.08;0.74;0.9;1" values="0;1;1;0;0"/>
+            </g>
+            <g opacity="0">
+              <circle r="6.5" fill="#6E86FF" opacity=".5" filter="url(#soft)"/>
+              <circle r="3" fill="#EAF0FF"/>
+              <animateMotion dur="2.6s" begin="0.7s" fill="freeze" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.82;1" path="M548,255 L350,305"/>
+              <animate attributeName="opacity" dur="2.6s" begin="0.7s" fill="freeze" keyTimes="0;0.08;0.74;0.9;1" values="0;1;1;0;0"/>
+            </g>
+            <g opacity="0">
+              <circle r="6.5" fill="#6E86FF" opacity=".5" filter="url(#soft)"/>
+              <circle r="3" fill="#EAF0FF"/>
+              <animateMotion dur="2.6s" begin="1.4s" fill="freeze" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.82;1" path="M548,255 L350,305"/>
+              <animate attributeName="opacity" dur="2.6s" begin="1.4s" fill="freeze" keyTimes="0;0.08;0.74;0.9;1" values="0;1;1;0;0"/>
+            </g>
+            <g opacity="0">
+              <circle r="6.5" fill="#6E86FF" opacity=".5" filter="url(#soft)"/>
+              <circle r="3" fill="#EAF0FF"/>
+              <animateMotion dur="2.6s" begin="0s" fill="freeze" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.82;1" path="M470,432 L350,305"/>
+              <animate attributeName="opacity" dur="2.6s" begin="0s" fill="freeze" keyTimes="0;0.08;0.74;0.9;1" values="0;1;1;0;0"/>
+            </g>
+            <g opacity="0">
+              <circle r="6.5" fill="#6E86FF" opacity=".5" filter="url(#soft)"/>
+              <circle r="3" fill="#EAF0FF"/>
+              <animateMotion dur="2.6s" begin="0.7s" fill="freeze" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.82;1" path="M470,432 L350,305"/>
+              <animate attributeName="opacity" dur="2.6s" begin="0.7s" fill="freeze" keyTimes="0;0.08;0.74;0.9;1" values="0;1;1;0;0"/>
+            </g>
+            <g opacity="0">
+              <circle r="6.5" fill="#6E86FF" opacity=".5" filter="url(#soft)"/>
+              <circle r="3" fill="#EAF0FF"/>
+              <animateMotion dur="2.6s" begin="1.4s" fill="freeze" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.82;1" path="M470,432 L350,305"/>
+              <animate attributeName="opacity" dur="2.6s" begin="1.4s" fill="freeze" keyTimes="0;0.08;0.74;0.9;1" values="0;1;1;0;0"/>
+            </g>
+            <g opacity="0">
+              <circle r="6.5" fill="#6E86FF" opacity=".5" filter="url(#soft)"/>
+              <circle r="3" fill="#EAF0FF"/>
+              <animateMotion dur="2.6s" begin="0s" fill="freeze" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.82;1" path="M165,415 L350,305"/>
+              <animate attributeName="opacity" dur="2.6s" begin="0s" fill="freeze" keyTimes="0;0.08;0.74;0.9;1" values="0;1;1;0;0"/>
+            </g>
+            <g opacity="0">
+              <circle r="6.5" fill="#6E86FF" opacity=".5" filter="url(#soft)"/>
+              <circle r="3" fill="#EAF0FF"/>
+              <animateMotion dur="2.6s" begin="0.7s" fill="freeze" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.82;1" path="M165,415 L350,305"/>
+              <animate attributeName="opacity" dur="2.6s" begin="0.7s" fill="freeze" keyTimes="0;0.08;0.74;0.9;1" values="0;1;1;0;0"/>
+            </g>
+            <g opacity="0">
+              <circle r="6.5" fill="#6E86FF" opacity=".5" filter="url(#soft)"/>
+              <circle r="3" fill="#EAF0FF"/>
+              <animateMotion dur="2.6s" begin="1.4s" fill="freeze" calcMode="linear" keyPoints="0;1;1" keyTimes="0;0.82;1" path="M165,415 L350,305"/>
+              <animate attributeName="opacity" dur="2.6s" begin="1.4s" fill="freeze" keyTimes="0;0.08;0.74;0.9;1" values="0;1;1;0;0"/>
+            </g>
+          </g>
+</svg>
+        <div class="cube-stage" id="cubeStage">
+          <div class="cube3d" id="cube3d">
+            <div class="face fc-front"></div>
+            <div class="face fc-back"></div>
+            <div class="face fc-right"></div>
+            <div class="face fc-left"></div>
+            <div class="face fc-top"></div>
+            <div class="face fc-bottom"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clients reveal">
+      <span class="lbl">Работаем с компаниями</span>
+      <div class="logos">
+        <b>COMPANY</b><b>LOGOIPSUM</b><b>company</b><b>Logoipsum</b><b>LOGO</b><b>company</b>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 1b. WHY / PHILOSOPHY ===== -->
+<section id="why" class="section">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-left reveal">
+        <span class="eyebrow">Наш подход</span>
+        <h2>Мы не начинаем<br>с маркетинга</h2>
+        <p class="lead">Большинство компаний ищут инструмент.<br><span class="accent">Мы ищем причину.</span></p>
+        <div class="why-divider"></div>
+        <div class="why-cards">
+          <div class="why-card">
+            <div class="why-row"><p>Наша задача не запустить рекламу.</p></div>
+            <div class="why-row"><p>Наша задача — найти точку роста бизнеса и собрать систему, которая позволит её реализовать.</p></div>
+          </div>
+          <div class="why-card">
+            <div class="why-row"><p>Поэтому мы не продаём отдельные услуги. <span class="accent">Мы создаём решения под конкретную задачу компании.</span></p></div>
+          </div>
+        </div>
+      </div>
+      <div class="why-right reveal">
+        <ul class="why-list">
+          <li><div class="why-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6"/><path d="M5 20a7 7 0 0 1 14 0"/></svg></div><p>Если рынок неправильно понимает ваш продукт — <span class="accent">мы меняем позиционирование.</span></p></li>
+          <li><div class="why-ic"><svg viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3.3 7.5L12 12.5l8.7-5M12 22.5V12.5"/></svg></div><p>Если продукт не соответствует рынку — <span class="accent">мы меняем продукт.</span></p></li>
+          <li><div class="why-ic"><svg viewBox="0 0 24 24"><path d="M12 12V3a9 9 0 1 0 9 9z"/><path d="M12 3a9 9 0 0 1 9 9h-9z"/></svg></div><p>Если бизнес упёрся в текущую модель — <span class="accent">мы пересобираем модель.</span></p></li>
+          <li><div class="why-ic"><svg viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12l9 5 9-5M3 16l9 5 9-5"/></svg></div><p>Если система не масштабируется — <span class="accent">мы проектируем новую.</span></p></li>
+          <li><div class="why-ic"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 7-7"/><path d="M17 8h4v4"/></svg></div><p>И только после этого — <span class="accent">подключаем маркетинг как инструмент роста.</span></p></li>
+        </ul>
+        <svg class="why-wave" viewBox="0 0 380 150" fill="none" aria-hidden="true"><defs><linearGradient id="wv" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5E78FF" stop-opacity="0"/><stop offset="45%" stop-color="#7E92FF" stop-opacity=".9"/><stop offset="100%" stop-color="#3550E8" stop-opacity="0"/></linearGradient></defs><polyline points="0,30 8,32 16,34 24,35 32,37 40,39 48,40 56,41 64,42 72,43 80,44 88,44 96,44 104,44 112,43 120,43 128,42 136,41 144,40 152,38 160,37 168,35 176,33 184,31 192,30 200,28 208,26 216,24 224,23 232,21 240,20 248,19 256,18 264,17 272,16 280,16 288,16 296,16 304,17 312,17 320,18 328,19 336,21 344,22 352,24 360,25 368,27 376,29" stroke="url(#wv)" stroke-width="1.4" opacity="0.5"/><polyline points="0,48 8,49 16,51 24,52 32,54 40,54 48,55 56,55 64,55 72,55 80,55 88,54 96,53 104,52 112,50 120,48 128,47 136,45 144,42 152,40 160,38 168,36 176,34 184,32 192,30 200,28 208,27 216,25 224,24 232,23 240,23 248,23 256,23 264,23 272,23 280,24 288,25 296,27 304,28 312,30 320,32 328,34 336,36 344,38 352,40 360,43 368,45 376,47" stroke="url(#wv)" stroke-width="1.28" opacity="0.45"/><polyline points="0,65 8,66 16,67 24,67 32,67 40,67 48,66 56,65 64,64 72,62 80,61 88,59 96,56 104,54 112,52 120,49 128,47 136,44 144,42 152,39 160,37 168,35 176,33 184,32 192,31 200,30 208,29 216,29 224,29 232,29 240,30 248,31 256,33 264,34 272,36 280,38 288,40 296,43 304,45 312,48 320,50 328,53 336,55 344,57 352,59 360,61 368,63 376,64" stroke="url(#wv)" stroke-width="1.16" opacity="0.4"/><polyline points="0,78 8,78 16,77 24,76 32,75 40,73 48,71 56,69 64,66 72,63 80,61 88,58 96,55 104,52 112,49 120,47 128,44 136,42 144,40 152,39 160,37 168,36 176,36 184,36 192,36 200,36 208,37 216,38 224,40 232,42 240,44 248,46 256,49 264,51 272,54 280,57 288,60 296,63 304,65 312,68 320,70 328,72 336,74 344,76 352,77 360,78 368,78 376,78" stroke="url(#wv)" stroke-width="1.04" opacity="0.35"/><polyline points="0,85 8,83 16,81 24,78 32,76 40,73 48,70 56,66 64,63 72,60 80,57 88,54 96,52 104,49 112,47 120,45 128,44 136,43 144,42 152,42 160,42 168,43 176,44 184,45 192,47 200,49 208,52 216,54 224,57 232,60 240,63 248,66 256,70 264,73 272,76 280,78 288,81 296,83 304,85 312,87 320,88 328,89 336,90 344,90 352,90 360,89 368,88 376,86" stroke="url(#wv)" stroke-width="0.92" opacity="0.3"/><polyline points="0,85 8,82 16,78 24,75 32,71 40,68 48,65 56,62 64,59 72,56 80,54 88,52 96,50 104,49 112,49 120,49 128,49 136,50 144,51 152,52 160,54 168,57 176,60 184,63 192,66 200,69 208,73 216,76 224,79 232,83 240,86 248,89 256,92 264,95 272,97 280,99 288,100 296,101 304,101 312,101 320,101 328,100 336,99 344,97 352,95 360,93 368,90 376,87" stroke="url(#wv)" stroke-width="0.8" opacity="0.25"/><polyline points="0,79 8,76 16,72 24,69 32,66 40,63 48,60 56,58 64,57 72,56 80,55 88,55 96,55 104,56 112,58 120,60 128,62 136,65 144,68 152,71 160,74 168,78 176,82 184,86 192,90 200,93 208,97 216,100 224,103 232,106 240,108 248,110 256,112 264,112 272,113 280,113 288,112 296,111 304,110 312,108 320,105 328,103 336,100 344,96 352,93 360,89 368,85 376,81" stroke="url(#wv)" stroke-width="0.68" opacity="0.2"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2. APPROACH ===== -->
+<section id="approach" class="section section--alt">
+  <div class="container">
+    <div class="approach-top">
+      <div class="approach-intro reveal">
+        <span class="eyebrow">Подход</span>
+        <h2>Рост — это результат системной работы</h2>
+        <p class="lead">Мы соединяем стратегию, продукт, маркетинг и продажи в единую систему, которая приносит измеримый результат.</p>
+        <a href="#why" class="link-arrow">Подробнее о подходе
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="approach-cards">
+        <div class="card reveal"><div class="num">01</div><h3>Стратегия</h3><p>Анализируем бизнес, рынок и клиентов. Находим точки роста и определяем фокус.</p></div>
+        <div class="card reveal"><div class="num">02</div><h3>Продукт</h3><p>Помогаем создавать и упаковывать продукты, которые решают задачи и приносят прибыль.</p></div>
+        <div class="card reveal"><div class="num">03</div><h3>Маркетинг</h3><p>Выстраиваем систему привлечения клиентов, которая масштабируется.</p></div>
+        <div class="card reveal"><div class="num">04</div><h3>Продажи</h3><p>Собираем процессы, которые конвертируют интерес в долгосрочные отношения и деньги.</p></div>
+      </div>
+    </div>
+    <div class="founder-row">
+      <div class="card founder-card reveal">
+        <div class="photo"><div class="photo-ph"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="4"/><path d="M4.5 20.5a7.5 7.5 0 0 1 15 0"/></svg><span class="ph-name">Рита Пиринен</span><span class="ph-hint">Загрузите фото</span></div></div>
+        <div class="info">
+          <div class="role">Основатель</div>
+          <h3>Рита Пиринен</h3>
+          <p>Стратег по маркетингу и развитию бизнеса. Опыт работы с предпринимателями, международными брендами, стартапами и продуктами сложных ниш.</p>
+          <p>12 лет в маркетинге — на стыке стратегии, продукта и технологий.</p>
+          <a href="#team" class="link-arrow">Подробнее
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+      <div class="card stats-card reveal">
+        <h3>Результат в цифрах</h3>
+        <div class="stats-grid">
+          <div class="stat"><div class="big">150+</div><div class="lbl">проектов реализовано</div></div>
+          <div class="stat"><div class="big">2–5x</div><div class="lbl">рост выручки у клиентов</div></div>
+          <div class="stat"><div class="big">30%</div><div class="lbl">средний рост маржинальности</div></div>
+          <div class="stat"><div class="big">&gt;20</div><div class="lbl">отраслей и ниш</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3. CONCEPT ===== -->
+<section id="concept" class="section">
+  <div class="container">
+    <div class="concept-grid">
+      <div class="reveal">
+        <span class="eyebrow">Концепция</span>
+        <h2>Что вы получите <span class="accent">за 24 часа</span></h2>
+        <p class="lead">Сначала вы увидите, какая маркетинговая система нужна именно вашему бизнесу.</p>
+        <p class="lead">Мы изучим вашу задачу, продукт и текущий маркетинг, после чего подготовим персональную концепцию проекта:</p>
+      </div>
+      <ul class="concept-list reveal">
+        <li><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg></span>основную точку роста</li>
+        <li><span class="ic"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><path d="M16 5.4a3 3 0 0 1 0 5.2"/><path d="M17 13.5a5.5 5.5 0 0 1 3.5 5.5"/></svg></span>целевую аудиторию и её мотивацию</li>
+        <li><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .8-4.4 4.2 1.1 6L12 17l-5.3 2.6 1.1-6L3.4 9.4l6-.8z"/></svg></span>позиционирование и центральную идею</li>
+        <li><span class="ic"><svg viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3.3 7.5L12 12.5l8.7-5M12 22.5V12.5"/></svg></span>конфигурацию продукта и оффера</li>
+        <li><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 11v3l4 1 8 4V6L7 10H4a1 1 0 0 0-1 1z"/><path d="M18 8a5 5 0 0 1 0 8"/></svg></span>необходимые инструменты продвижения</li>
+        <li><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9.5h18M8 3v4M16 3v4"/></svg></span>план реализации, сроки и состав работ</li>
+      </ul>
+    </div>
+    <div class="concept-cta reveal">
+      <a href="#contact" class="btn btn-primary">Получить персональную концепцию
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="concept-note reveal">
+      <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+      <span>Это не шаблонная стратегия. Концепция создаётся под ваш бизнес, текущую точку и задачи роста.</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== PROCESS (how the project goes) ===== -->
+<section id="process" class="section section--alt">
+  <div class="container">
+    <div class="proc-grid">
+      <div class="proc-intro reveal">
+        <span class="eyebrow">Процесс работы</span>
+        <h2>Как проходит<br>проект</h2>
+        <p class="lead">Проект — это не набор разрозненных задач. Это последовательная работа, где каждый этап формирует основу для следующего.</p>
+        <div class="proc-radial reveal">
+          <div class="process-wrap">
+            <svg class="rings" viewBox="0 0 760 560" fill="none" stroke="#4D69FF">
+              <circle cx="380" cy="280" r="120" stroke-opacity=".5"/>
+              <circle cx="380" cy="280" r="180" stroke-opacity=".28" stroke-dasharray="3 7"/>
+              <circle cx="380" cy="280" r="245" stroke-opacity=".16"/>
+              <g stroke-opacity=".35">
+                <line x1="380" y1="280" x2="250" y2="280"/>
+                <line x1="380" y1="280" x2="510" y2="280"/>
+                <line x1="380" y1="280" x2="288" y2="188"/>
+                <line x1="380" y1="280" x2="472" y2="188"/>
+                <line x1="380" y1="280" x2="288" y2="372"/>
+                <line x1="380" y1="280" x2="472" y2="372"/>
+              </g>
+              <g fill="#4D69FF" stroke="none">
+                <circle cx="250" cy="280" r="5.5"/><circle cx="510" cy="280" r="5.5"/>
+                <circle cx="288" cy="188" r="5.5"/><circle cx="472" cy="188" r="5.5"/>
+                <circle cx="288" cy="372" r="5.5"/><circle cx="472" cy="372" r="5.5"/>
+              </g>
+            </svg>
+            <div class="process-grid">
+              <div class="pcell reveal"><div class="pcard"><h3>Аудит и анализ</h3><p>Изучаем ваш бизнес, продукт, рынок и текущий маркетинг.</p></div></div>
+              <div class="pcell reveal"><div class="pcard"><h3>Точка роста</h3><p>Выявляем ключевую точку роста и потенциал.</p></div></div>
+              <div class="pcube reveal">
+                <svg class="cube-svg" viewBox="0 0 100 112" fill="none">
+                  <defs><linearGradient id="cg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7E92FF"/><stop offset="1" stop-color="#3550E8"/></linearGradient></defs>
+                  <polygon points="50,6 92,30 50,54 8,30" fill="#6E86FF"/>
+                  <polygon points="8,30 50,54 50,106 8,82" fill="#2C46D8"/>
+                  <polygon points="92,30 50,54 50,106 92,82" fill="url(#cg)"/>
+                  <polyline points="50,6 50,54" stroke="#cfd8ff" stroke-width="1" opacity=".5"/>
+                </svg>
+              </div>
+              <div class="pcell reveal"><div class="pcard"><h3>Стратегия</h3><p>Формируем позиционирование, идею и оффер.</p></div></div>
+              <div class="pcell reveal"><div class="pcard"><h3>Инструменты</h3><p>Подбираем каналы и инструменты продвижения.</p></div></div>
+              <div class="pcell reveal"><div class="pcard"><h3>План реализации</h3><p>Составляем план работ, сроки и этапы.</p></div></div>
+              <div class="pcell reveal"><div class="pcard"><h3>Концепция</h3><p>Всё собираем в единую концепцию проекта.</p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="proc-steps reveal">
+        <div class="proc-step"><div class="proc-h"><span class="proc-num">01</span><h3>Диагностика</h3></div><p>Изучаем бизнес, рынок, продукт, аудиторию и текущую ситуацию. Находим истинные причины, которые ограничивают рост.</p></div>
+        <div class="proc-step"><div class="proc-h"><span class="proc-num">02</span><h3>Концепция</h3></div><p>Формулируем стратегическое направление, определяем ключевую идею и создаём концепцию будущей системы.</p></div>
+        <div class="proc-step"><div class="proc-h"><span class="proc-num">03</span><h3>Проектирование системы</h3></div><p>Проектируем систему: продукт, процессы, позиционирование, воронки, модель, маркетинг и точки роста.</p></div>
+        <div class="proc-step"><div class="proc-h"><span class="proc-num">04</span><h3>Реализация</h3></div><p>Запускаем и внедряем решения. Выстраиваем процессы, создаём продукты, запускаем маркетинг и коммуникации.</p></div>
+        <div class="proc-step"><div class="proc-h"><span class="proc-num">05</span><h3>Масштабирование</h3></div><p>Анализируем результаты, усиливаем систему и масштабируем то, что даёт устойчивый рост.</p></div>
+      </div>
+    </div>
+    <div class="proc-foot reveal">
+      <div class="proc-foot-ic"><svg viewBox="0 0 24 24"><path d="M12 2l2 6.5 6.5 2-6.5 2L12 22l-2-6.5-6.5-2 6.5-2z"/></svg></div>
+      <p>Это снижает неопределённость и делает работу прозрачной на каждом этапе. <span class="accent">Вы всегда понимаете, что происходит и какой следующий шаг.</span></p>
+      <a href="#contact" class="btn btn-ghost">Обсудить ваш проект
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. SITUATION ===== -->
+<section id="situation" class="section">
+  <div class="container">
+    <div class="section-head reveal"><h2>Узнаёте свою ситуацию?</h2></div>
+    <div class="sit-grid">
+      <div class="flip reveal" tabindex="0">
+        <div class="flip-inner">
+          <div class="flip-face flip-front"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3c3 1.4 4.6 4.4 4.6 8L13.5 16h-3L7.4 11c0-3.6 1.6-6.6 4.6-8z"/><path d="M8.5 16.5l-2 2.5M15.5 16.5l2 2.5"/><circle cx="12" cy="9.5" r="1.6"/></svg></div><h3>Нужно запустить новый продукт или направление</h3><span class="flip-hint">Подробнее →</span></div>
+          <div class="flip-face flip-back"><p>Но пока нет ясного позиционирования, оффера, посадочной страницы и понятного плана привлечения клиентов.</p></div>
+        </div>
+      </div>
+      <div class="flip reveal" tabindex="0">
+        <div class="flip-inner">
+          <div class="flip-face flip-front"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><path d="M16 5.4a3 3 0 0 1 0 5.2"/><path d="M17 13.5a5.5 5.5 0 0 1 3.5 5.5"/></svg></div><h3>Нужен стабильный поток клиентов</h3><span class="flip-hint">Подробнее →</span></div>
+          <div class="flip-face flip-back"><p>Реклама, контент и рекомендации дают отдельные заявки, но не складываются в предсказуемую систему.</p></div>
+        </div>
+      </div>
+      <div class="flip reveal" tabindex="0">
+        <div class="flip-inner">
+          <div class="flip-face flip-front"><div class="ico"><svg viewBox="0 0 24 24"><path d="M5 21V11M12 21V4M19 21v-6"/><path d="M3 21h18"/></svg></div><h3>Маркетинг есть, результата недостаточно</h3><span class="flip-hint">Подробнее →</span></div>
+          <div class="flip-face flip-back"><p>Вы вкладываетесь в команду и подрядчиков, но не понимаете, какие действия действительно влияют на продажи.</p></div>
+        </div>
+      </div>
+      <div class="flip reveal" tabindex="0">
+        <div class="flip-inner">
+          <div class="flip-face flip-front"><div class="ico"><svg viewBox="0 0 24 24"><path d="M6 21V4M6 4h11l-2.5 3.5L17 11H6"/></svg></div><h3>Бизнес упёрся в текущий уровень</h3><span class="flip-hint">Подробнее →</span></div>
+          <div class="flip-face flip-back"><p>Чтобы расти дальше, нужны другие клиенты, более сильный продукт, новый чек или выход в другой сегмент.</p></div>
+        </div>
+      </div>
+      <div class="flip reveal" tabindex="0">
+        <div class="flip-inner">
+          <div class="flip-face flip-front"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6"/><path d="M5 20a7 7 0 0 1 14 0"/></svg></div><h3>Всё по-прежнему держится на вас</h3><span class="flip-hint">Подробнее →</span></div>
+          <div class="flip-face flip-back"><p>Вы ставите задачи маркетологам, согласовываете контент, придумываете офферы и вручную связываете работу разных исполнителей.</p></div>
+        </div>
+      </div>
+      <div class="flip reveal" tabindex="0">
+        <div class="flip-inner">
+          <div class="flip-face flip-front"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .8-4.4 4.2 1.1 6L12 17l-5.3 2.6 1.1-6L3.4 9.4l6-.8z"/></svg></div><h3>Сильная экспертиза не превращается в возможности</h3><span class="flip-hint">Подробнее →</span></div>
+          <div class="flip-face flip-back"><p>У вас есть результаты и репутация, но они не приносят нужного количества клиентов, партнёрств, выступлений и публикаций.</p></div>
+        </div>
+      </div>
+    </div>
+    <p class="sit-foot reveal">Вам не нужен ещё один отдельный маркетинговый инструмент. Нужна <span class="accent">персональная система</span>, которая свяжет продукт, позиционирование, привлечение клиентов и медийность с конкретной задачей бизнеса.</p>
+    <div class="sit-cta reveal">
+      <a href="#contact" class="btn btn-primary">Получить концепцию системы за 24 часа
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. SOLUTION ===== -->
+<section id="solution" class="section section--alt">
+  <div class="container">
+    <div class="card solution-card reveal">
+      <div class="l">
+        <h2>Мы соединяем <span class="accent">продукт, позиционирование, упаковку, лидогенерацию и медийность</span>, чтобы рынок:</h2>
+      </div>
+      <div class="r">
+        <ul class="solution-list">
+          <li><span class="sol-ic"><svg viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>правильно считывал ваш масштаб;</li>
+          <li><span class="sol-ic"><svg viewBox="0 0 24 24"><path d="M6 3h12l3 6-9 12L3 9z"/><path d="M3 9h18M8 3l-2 6 6 12 6-12-2-6"/></svg></span>понимал ценность продукта;</li>
+          <li><span class="sol-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg></span>видел отличие от конкурентов;</li>
+          <li><span class="sol-ic"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>доверял вам до первой встречи;</li>
+          <li><span class="sol-ic"><svg viewBox="0 0 24 24"><path d="M22 3L11 14"/><path d="M22 3l-7 19-4-8-8-4z"/></svg></span>совершал следующий целевой шаг.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. SERVICES ===== -->
+<section id="services" class="section">
+  <div class="container">
+    <div class="section-head reveal"><h2>Что может входить в работу</h2></div>
+    <div class="serv-grid">
+      <div class="card reveal">
+        <div class="serv-head"><div class="ico-ring"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg></div><h3>Стратегия</h3></div>
+        <ul><li>диагностика бизнеса, аудитории и рынка;</li><li>формирование или пересборка продукта;</li><li>позиционирование;</li><li>ключевые смыслы и отличие;</li><li>продуктовая линейка и офферы.</li></ul>
+      </div>
+      <div class="card reveal">
+        <div class="serv-head"><div class="ico-ring"><svg viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3.3 7.5L12 12.5l8.7-5M12 22.5V12.5"/></svg></div><h3>Упаковка</h3></div>
+        <ul><li>структура и тексты посадочной страницы;</li><li>упаковка бренда компании и основателя;</li><li>презентационные материалы;</li><li>единая коммуникационная логика.</li></ul>
+      </div>
+      <div class="card reveal">
+        <div class="serv-head"><div class="ico-ring"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><path d="M16 5.4a3 3 0 0 1 0 5.2"/><path d="M17 13.5a5.5 5.5 0 0 1 3.5 5.5"/></svg></div><h3>Привлечение клиентов</h3></div>
+        <ul><li>гипотезы и сегменты для лидогенерации;</li><li>настройка процесса поиска клиентов;</li><li>сообщения и сценарии первичного контакта;</li><li>запуск и проверка гипотез.</li></ul>
+      </div>
+      <div class="card reveal">
+        <div class="serv-head"><div class="ico-ring"><svg viewBox="0 0 24 24"><path d="M3 11v3l4 1 8 4V6L7 10H4a1 1 0 0 0-1 1z"/><path d="M18 8a5 5 0 0 1 0 8"/></svg></div><h3>Медийность</h3></div>
+        <ul><li>стратегия публичного присутствия;</li><li>темы и разработка выступлений;</li><li>публикации в СМИ;</li><li>экспертные материалы и информационные поводы.</li></ul>
+      </div>
+    </div>
+    <div class="serv-cta reveal">
+      <a href="#contact" class="btn btn-primary">Получить персональную стратегию за 24 часа
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <p class="serv-note reveal">Мы не включаем в проект инструменты «для галочки». Каждый элемент должен решать конкретную коммерческую или репутационную задачу.</p>
+  </div>
+</section>
+
+<!-- ===== 8. CASES ===== -->
+<section id="cases" class="section section--alt">
+  <div class="cases-wave"><svg viewBox="0 0 2000 200" fill="none" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="cwg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9DB0FF"/><stop offset="100%" stop-color="#3550E8"/></linearGradient></defs><polyline points="0,78 16,81 32,84 48,87 64,89 80,91 96,92 112,93 128,93 144,93 160,92 176,90 192,88 208,86 224,83 240,80 256,77 272,74 288,71 304,69 320,66 336,65 352,64 368,63 384,63 400,64 416,65 432,67 448,69 464,71 480,74 496,77 512,80 528,83 544,86 560,88 576,90 592,92 608,93 624,93 640,93 656,92 672,90 688,89 704,86 720,84 736,81 752,78 768,75 784,72 800,69 816,67 832,65 848,64 864,63 880,63 896,64 912,65 928,66 944,68 960,71 976,74 992,76 1008,80 1024,82 1040,85 1056,88 1072,90 1088,91 1104,92 1120,93 1136,93 1152,92 1168,91 1184,89 1200,87 1216,84 1232,81 1248,78 1264,75 1280,72 1296,70 1312,67 1328,66 1344,64 1360,63 1376,63 1392,63 1408,64 1424,66 1440,68 1456,70 1472,73 1488,76 1504,79 1520,82 1536,85 1552,87 1568,89 1584,91 1600,92 1616,93 1632,93 1648,92 1664,91 1680,90 1696,87 1712,85 1728,82 1744,79 1760,76 1776,73 1792,70 1808,68 1824,66 1840,64 1856,63 1872,63 1888,63 1904,64 1920,65 1936,67 1952,69 1968,72 1984,75 2000,78" stroke="url(#cwg)" stroke-width="1.7" opacity="0.55"/><polyline points="0,95 16,98 32,100 48,102 64,103 80,104 96,104 112,103 128,101 144,99 160,97 176,94 192,90 208,87 224,83 240,79 256,76 272,73 288,71 304,69 320,68 336,68 352,68 368,70 384,71 400,74 416,77 432,80 448,83 464,87 480,90 496,94 512,97 528,100 544,102 560,103 576,104 592,104 608,103 624,102 640,100 656,97 672,94 688,91 704,87 720,84 736,80 752,77 768,74 784,72 800,70 816,69 832,68 848,68 864,69 880,71 896,73 912,76 928,79 944,82 960,86 976,90 992,93 1008,96 1024,99 1040,101 1056,103 1072,104 1088,104 1104,104 1120,102 1136,100 1152,98 1168,95 1184,92 1200,88 1216,85 1232,81 1248,78 1264,75 1280,72 1296,70 1312,69 1328,68 1344,68 1360,69 1376,70 1392,72 1408,75 1424,78 1440,81 1456,85 1472,89 1488,92 1504,95 1520,98 1536,101 1552,102 1568,104 1584,104 1600,104 1616,103 1632,101 1648,99 1664,96 1680,93 1696,89 1712,86 1728,82 1744,79 1760,75 1776,73 1792,71 1808,69 1824,68 1840,68 1856,69 1872,70 1888,72 1904,74 1920,77 1936,81 1952,84 1968,88 1984,91 2000,95" stroke="url(#cwg)" stroke-width="1.56" opacity="0.5"/><polyline points="0,112 16,114 32,115 48,115 64,114 80,113 96,111 112,108 128,105 144,101 160,97 176,93 192,88 208,84 224,81 240,78 256,76 272,74 288,73 304,73 320,74 336,76 352,78 368,81 384,85 400,89 416,93 432,97 448,101 464,105 480,108 496,111 512,113 528,114 544,115 560,115 576,113 592,112 608,109 624,106 640,102 656,98 672,94 688,89 704,85 720,82 736,79 752,76 768,74 784,73 800,73 816,74 832,75 848,77 864,80 880,84 896,88 912,92 928,96 944,100 960,104 976,108 992,110 1008,113 1024,114 1040,115 1056,115 1072,114 1088,112 1104,110 1120,106 1136,103 1152,99 1168,95 1184,90 1200,86 1216,83 1232,79 1248,77 1264,75 1280,73 1296,73 1312,73 1328,75 1344,77 1360,80 1376,83 1392,87 1408,91 1424,95 1440,99 1456,103 1472,107 1488,110 1504,112 1520,114 1536,115 1552,115 1568,114 1584,113 1600,110 1616,107 1632,104 1648,100 1664,96 1680,91 1696,87 1712,84 1728,80 1744,77 1760,75 1776,74 1792,73 1808,73 1824,74 1840,76 1856,79 1872,82 1888,86 1904,90 1920,94 1936,98 1952,102 1968,106 1984,109 2000,112" stroke="url(#cwg)" stroke-width="1.42" opacity="0.44"/><polyline points="0,126 16,126 32,125 48,123 64,120 80,116 96,112 112,108 128,103 144,98 160,93 176,89 192,85 208,82 224,80 240,78 256,78 272,79 288,80 304,82 320,85 336,89 352,94 368,98 384,103 400,108 416,112 432,116 448,120 464,123 480,125 496,126 512,126 528,125 544,123 560,121 576,117 592,113 608,109 624,104 640,99 656,94 672,90 688,86 704,83 720,80 736,79 752,78 768,78 784,80 800,82 816,85 832,88 848,92 864,97 880,102 896,107 912,111 928,115 944,119 960,122 976,124 992,126 1008,126 1024,125 1040,124 1056,121 1072,118 1088,114 1104,110 1120,105 1136,100 1152,96 1168,91 1184,87 1200,84 1216,81 1232,79 1248,78 1264,78 1280,79 1296,81 1312,84 1328,87 1344,91 1360,96 1376,101 1392,105 1408,110 1424,114 1440,118 1456,121 1472,124 1488,125 1504,126 1520,126 1536,124 1552,122 1568,119 1584,115 1600,111 1616,106 1632,102 1648,97 1664,92 1680,88 1696,84 1712,82 1728,79 1744,78 1760,78 1776,79 1792,80 1808,83 1824,86 1840,90 1856,95 1872,99 1888,104 1904,109 1920,113 1936,117 1952,121 1968,123 1984,125 2000,126" stroke="url(#cwg)" stroke-width="1.28" opacity="0.39"/><polyline points="0,135 16,132 32,128 48,124 64,119 80,114 96,108 112,103 128,98 144,93 160,89 176,86 192,84 208,83 224,83 240,84 256,86 272,89 288,93 304,98 320,103 336,108 352,114 368,119 384,124 400,128 416,132 432,135 448,136 464,137 480,137 496,135 512,133 528,129 544,125 560,120 576,115 592,110 608,104 624,99 640,94 656,90 672,87 688,85 704,83 720,83 736,84 752,86 768,89 784,92 800,97 816,102 832,107 848,112 864,118 880,123 896,127 912,131 928,134 944,136 960,137 976,137 992,136 1008,133 1024,130 1040,126 1056,121 1072,116 1088,111 1104,106 1120,100 1136,95 1152,91 1168,88 1184,85 1200,84 1216,83 1232,84 1248,85 1264,88 1280,91 1296,96 1312,100 1328,106 1344,111 1360,116 1376,122 1392,126 1408,130 1424,133 1440,136 1456,137 1472,137 1488,136 1504,134 1520,131 1536,127 1552,123 1568,118 1584,112 1600,107 1616,102 1632,97 1648,92 1664,89 1680,86 1696,84 1712,83 1728,83 1744,85 1760,87 1776,90 1792,94 1808,99 1824,104 1840,110 1856,115 1872,120 1888,125 1904,129 1920,133 1936,135 1952,137 1968,137 1984,136 2000,135" stroke="url(#cwg)" stroke-width="1.14" opacity="0.33"/><polyline points="0,136 16,131 32,125 48,119 64,113 80,107 96,102 112,97 128,93 144,90 160,89 176,88 192,89 208,90 224,93 240,97 256,102 272,107 288,113 304,119 320,125 336,131 352,136 368,140 384,144 400,146 416,148 432,148 448,147 464,145 480,141 496,137 512,132 528,127 544,121 560,115 576,109 592,103 608,98 624,94 640,91 656,89 672,88 688,88 704,90 720,92 736,96 752,101 768,106 784,112 800,118 816,124 832,129 848,135 864,139 880,143 896,146 912,148 928,148 944,147 960,145 976,142 992,138 1008,133 1024,128 1040,122 1056,116 1072,110 1088,105 1104,99 1120,95 1136,92 1152,89 1168,88 1184,88 1200,89 1216,92 1232,95 1248,99 1264,105 1280,110 1296,116 1312,122 1328,128 1344,133 1360,138 1376,142 1392,145 1408,147 1424,148 1440,148 1456,146 1472,143 1488,139 1504,135 1520,129 1536,124 1552,118 1568,112 1584,106 1600,101 1616,96 1632,92 1648,90 1664,88 1680,88 1696,89 1712,91 1728,94 1744,98 1760,103 1776,109 1792,115 1808,121 1824,127 1840,132 1856,137 1872,141 1888,145 1904,147 1920,148 1936,148 1952,146 1968,144 1984,140 2000,136" stroke="url(#cwg)" stroke-width="1.0" opacity="0.28"/><polyline points="0,131 16,124 32,117 48,111 64,106 80,101 96,97 112,95 128,93 144,93 160,94 176,97 192,101 208,106 224,111 240,117 256,124 272,130 288,137 304,143 320,148 336,153 352,156 368,158 384,159 400,159 416,157 432,154 448,150 464,144 480,139 496,132 512,126 528,119 544,113 560,107 576,102 592,98 608,95 624,93 640,93 656,94 672,96 688,100 704,104 720,110 736,116 752,122 768,129 784,135 800,141 816,147 832,152 848,155 864,158 880,159 896,159 912,157 928,155 944,151 960,146 976,140 992,134 1008,127 1024,121 1040,114 1056,108 1072,103 1088,99 1104,96 1120,94 1136,93 1152,94 1168,96 1184,99 1200,103 1216,108 1232,114 1248,121 1264,127 1280,134 1296,140 1312,146 1328,151 1344,154 1360,157 1376,159 1392,159 1408,158 1424,155 1440,152 1456,147 1472,142 1488,136 1504,129 1520,122 1536,116 1552,110 1568,104 1584,100 1600,96 1616,94 1632,93 1648,93 1664,95 1680,98 1696,102 1712,107 1728,113 1744,119 1760,125 1776,132 1792,138 1808,144 1824,149 1840,154 1856,157 1872,158 1888,159 1904,158 1920,156 1936,153 1952,148 1968,143 1984,137 2000,131" stroke="url(#cwg)" stroke-width="0.86" opacity="0.22"/></svg></div>
+  <div class="container">
+    <div class="section-head left reveal">
+      <span class="eyebrow">Наши проекты</span>
+      <h2>Результат важнее инструментов</h2>
+      <p class="lead">Каждый проект требует своей конфигурации стратегии, продукта, маркетинга и медиа. Ниже — несколько примеров того, как выглядит эта работа на практике.</p>
+    </div>
+    <div class="cases-grid">
+      <!-- case 1 -->
+      <div class="card case reveal">
+        <div class="case-top"><span class="cnum">01</span><div><h3>28 Concept Store</h3><div class="ctag">Премиальный fashion &amp; lifestyle concept store</div></div></div>
+        <div class="blk-lbl">Что было сделано</div>
+        <ul class="did"><li>бренд-концепция</li><li>интерьерная концепция</li><li>бизнес-модель</li><li>система бизнес-процессов</li><li>маркетинговая система</li><li>бренд-менеджмент и PR</li><li>вывод на рынок и передача системы</li></ul>
+        <hr>
+        <div class="blk-lbl">Результат</div>
+        <div class="res-item"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 7-7"/><path d="M17 8h4v4"/></svg></div><div><div class="rb">800 000 ₽</div><div class="rl">прибыль в первый месяц</div></div></div>
+        <div class="res-item"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><path d="M16 5.4a3 3 0 0 1 0 5.2M17 13.5a5.5 5.5 0 0 1 3.5 5.5"/></svg></div><div><div class="rb">950</div><div class="rl">подписчиков без бюджета</div></div></div>
+        <div class="res-item"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 7-7"/><path d="M17 8h4v4"/></svg></div><div><div class="rb">15%</div><div class="rl">системный рост выручки за 6 месяцев</div></div></div>
+      </div>
+      <!-- case 2 -->
+      <div class="card case reveal">
+        <div class="case-top"><span class="cnum">02</span><div><h3>Анна Минакова</h3><div class="ctag">ESG-лидерство, устойчивое развитие и технологии</div></div></div>
+        <div class="blk-lbl">Что было сделано</div>
+        <ul class="did"><li>стратегия личного бренда и медиа</li><li>бренд-менеджмент и PR</li><li>подготовка выступлений</li><li>создание новых продуктов</li><li>создание технологического стартапа</li><li>подготовка к инвестициям</li><li>стратегическое сопровождение более 1 года</li></ul>
+        <hr>
+        <div class="blk-lbl">Результат</div>
+        <div class="res-item"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M10 9l5 3-5 3z"/></svg></div><div><div class="rb">17 000</div><div class="rl">подписчиков YouTube с нуля за 3 месяца</div></div></div>
+        <div class="res-item"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h5"/></svg></div><div><div class="rb" style="font-size:0.95rem">своя колонка в РБК Компании</div></div></div>
+        <div class="res-item"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 12h6"/><path d="M8 8a4 4 0 0 0 0 8h2M16 16a4 4 0 0 0 0-8h-2"/></svg></div><div><div class="rb" style="font-size:0.95rem">новые партнёрства и возможности</div></div></div>
+        <div class="res-item"><div class="ic"><svg viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3.3 7.5L12 12.5l8.7-5M12 22.5V12.5"/></svg></div><div><div class="rb" style="font-size:0.95rem">новый технологический продукт</div></div></div>
+      </div>
+      <!-- case 3 -->
+      <div class="card case reveal">
+        <div class="case-top"><span class="cnum">03</span><div><h3>Татьяна Кузнецова</h3><div class="ctag">HR-советник и эксперт по управлению людьми</div></div></div>
+        <div class="blk-lbl">Что было сделано</div>
+        <ul class="did"><li>стратегия личного бренда и медиа</li><li>формирование фреймворка и методологии</li><li>продуктовая матрица и новое позиционирование</li><li>создание технологического стартапа</li><li>стратегическое сопровождение</li><li>продюсирование 3-х книг</li></ul>
+        <hr>
+        <div class="blk-lbl">Результат</div>
+        <div class="res-item"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19a2 2 0 0 1 2-2h13"/></svg></div><div><div class="rb" style="font-size:0.95rem">создана книга автора</div></div></div>
+        <div class="res-item"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 9l9-4 9 4-9 4z"/><path d="M7 11v4c0 1 2.5 2 5 2s5-1 5-2v-4"/></svg></div><div><div class="rb" style="font-size:0.95rem">сформирована платформа преподавателя ВУЗа</div></div></div>
+        <div class="res-item"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg></div><div><div class="rb" style="font-size:0.95rem">авторская методика для масштабирования</div></div></div>
+        <div class="res-item"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .8-4.4 4.2 1.1 6L12 17l-5.3 2.6 1.1-6L3.4 9.4l6-.8z"/></svg></div><div><div class="rb" style="font-size:0.95rem">создан HRTech-продукт</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. FOUNDER / TEAM INSIGHTERS ===== -->
+<section id="team" class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>Команда <span class="accent">INSIGHTERS</span></h2>
+      <p class="lead">Стратегия создаётся одним человеком. Реализуется командой.</p>
+    </div>
+    <div class="founder2 reveal">
+      <div class="photo"><div class="photo-ph"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="4"/><path d="M4.5 20.5a7.5 7.5 0 0 1 15 0"/></svg><span class="ph-name">Маргарита Пиринен</span><span class="ph-hint">Загрузите фото</span></div></div>
+      <div class="card info">
+        <div class="f2-head"><span class="cnum">01</span><h3>Маргарита Пиринен</h3></div>
+        <div class="role">Стратег по маркетингу и развитию бизнеса • Venture Builder</div>
+        <p class="bio">12+ лет на стыке маркетинга, продуктов и технологий. Создавала и выводила на рынок собственные компании, стартапы и продукты. Работала с предпринимателями, экспертами, международными брендами и проектами сложных ниш.</p>
+        <div class="f2-stats">
+          <div><div class="big">350+</div><div class="lbl">млн ₽ привлечено в проекты клиентов</div></div>
+          <div><div class="big">2</div><div class="lbl">успешных exits в собственном бизнесе</div></div>
+          <div><div class="big">50+</div><div class="lbl">проектов в разных отраслях</div></div>
+        </div>
+        <div class="f2-resp">
+          <h4>Отвечает за:</h4>
+          <ul>
+            <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-5"/></svg>комплексную стратегию роста и запуска бизнеса</li>
+            <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-5"/></svg>продукт и позиционирование на целевом рынке</li>
+            <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-5"/></svg>архитектуру маркетинговой системы</li>
+            <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-5"/></svg>разработку бизнес-концепции проекта</li>
+            <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-5"/></svg>GTM: вывод технологий и новых продуктов в рынок</li>
+            <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-5"/></svg>целостность всей системы</li>
+            <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-5"/></svg>привлечение инвестиций и выход на новые рынки</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10. DELIVERY TEAM ===== -->
+<section id="delivery" class="section section--alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>Команда <span class="accent">реализации</span></h2>
+      <p class="lead">После утверждения стратегии в работу подключается команда INSIGHTERS. Мы собираем систему под конкретную задачу бизнеса и реализуем её силами профильных специалистов.</p>
+    </div>
+    <div class="delivery-grid">
+      <div class="card delivery-left reveal">
+        <h3>Что может реализовывать команда</h3>
+        <div class="cap-grid">
+          <div class="cap"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></svg></div><span>Упаковка и посадочные страницы</span></div>
+          <div class="cap"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><path d="M16 6a3 3 0 0 1 0 5M17.5 14a5 5 0 0 1 3 5"/><circle cx="18" cy="9" r="2"/></svg></div><span>Лидогенерация</span></div>
+          <div class="cap"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 11v3l4 1 8 4V6L7 10H4a1 1 0 0 0-1 1z"/><path d="M18 8a5 5 0 0 1 0 8"/></svg></div><span>Медийное продвижение</span></div>
+          <div class="cap"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 20h4l10-10-4-4L4 16z"/><path d="M14 6l4 4"/></svg></div><span>Публикации и PR</span></div>
+          <div class="cap"><div class="ico"><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div><span>Выступления и экспертное позиционирование</span></div>
+          <div class="cap"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div><span>Маркетинговые материалы</span></div>
+          <div class="cap"><div class="ico"><svg viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3.3 7.5L12 12.5l8.7-5M12 22.5V12.5"/></svg></div><span>Продуктовая упаковка</span></div>
+          <div class="cap"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/></svg></div><span>Контент и коммуникации</span></div>
+        </div>
+      </div>
+      <div class="card delivery-right reveal">
+        <div class="star-wrap">
+          <svg class="rings" style="position:absolute;width:200px;height:200px;opacity:.5" viewBox="0 0 200 200" fill="none" stroke="#4D69FF"><circle cx="100" cy="100" r="50" stroke-opacity=".5"/><circle cx="100" cy="100" r="75" stroke-opacity=".28"/><circle cx="100" cy="100" r="98" stroke-opacity=".15"/></svg>
+          <svg class="star" viewBox="0 0 24 24" stroke-linejoin="round"><path d="M12 3l2.6 5.6 6 .8-4.4 4.2 1.1 6L12 17l-5.3 2.6 1.1-6L3.4 9.4l6-.8z"/></svg>
+        </div>
+        <div style="width:100%">
+          <div class="res-lbl">Результат</div>
+          <p>Вы работаете с одной командой, которая отвечает не за отдельные инструменты, а за конечный результат проекта.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 11. PROJECT TEAM ===== -->
+<section id="people" class="section">
+  <div class="container">
+    <div class="section-head reveal"><h2>Команда <span class="accent">проекта</span></h2></div>
+    <div class="people-grid">
+      <div class="person reveal">
+        <div class="pphoto"><div class="photo-ph"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="4"/><path d="M4.5 20.5a7.5 7.5 0 0 1 15 0"/></svg><span class="ph-name">Константин Чугунов</span><span class="ph-hint">Загрузите фото</span></div></div>
+        <div class="pbody">
+          <h3>Константин Чугунов</h3>
+          <div class="prole">Маркетолог, эксперт по системной лидогенерации</div>
+          <h5>Отвечает за:</h5>
+          <ul><li>разработку гипотез привлечения клиентов</li><li>рекламные системы и аналитику</li><li>тестирование каналов привлечения</li><li>масштабирование лидогенерации</li></ul>
+        </div>
+      </div>
+      <div class="person reveal">
+        <div class="pphoto"><div class="photo-ph"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="4"/><path d="M4.5 20.5a7.5 7.5 0 0 1 15 0"/></svg><span class="ph-name">Юлия Чугунова</span><span class="ph-hint">Загрузите фото</span></div></div>
+        <div class="pbody">
+          <h3>Юлия Чугунова</h3>
+          <div class="prole">Маркетолог, эксперт по системной лидогенерации</div>
+          <h5>Отвечает за:</h5>
+          <ul><li>воронки привлечения клиентов</li><li>рекламные кампании</li><li>запуск и оптимизацию трафика</li><li>управление показателями эффективности</li></ul>
+        </div>
+      </div>
+      <div class="person reveal">
+        <div class="pphoto"><div class="photo-ph"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="4"/><path d="M4.5 20.5a7.5 7.5 0 0 1 15 0"/></svg><span class="ph-name">Милана Суркова</span><span class="ph-hint">Загрузите фото</span></div></div>
+        <div class="pbody">
+          <h3>Милана Суркова</h3>
+          <div class="prole">Product marketing manager</div>
+          <h5>Отвечает за:</h5>
+          <ul><li>исследование аудитории</li><li>упаковку продукта</li><li>продуктовый маркетинг</li><li>коммуникационную стратегию</li><li>запуск новых продуктов</li></ul>
+        </div>
+      </div>
+      <div class="person reveal">
+        <div class="pphoto"><div class="photo-ph"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="4"/><path d="M4.5 20.5a7.5 7.5 0 0 1 15 0"/></svg><span class="ph-name">Василий Рихтер</span><span class="ph-hint">Загрузите фото</span></div></div>
+        <div class="pbody">
+          <h3>Василий Рихтер</h3>
+          <div class="prole">Креативный менеджер, SMM-стратег</div>
+          <h5>Отвечает за:</h5>
+          <ul><li>контент-стратегию</li><li>развитие социальных сетей</li><li>креативные концепции</li><li>визуальную коммуникацию бренда</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 12. CONTACT ===== -->
+<section id="contact" class="section section--alt">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="reveal">
+        <span class="badge">Финальный экран</span>
+        <h2>Получите концепцию маркетинговой системы для вашего бизнеса <span class="accent">за 24 часа</span></h2>
+        <div class="contact-divider"></div>
+        <h4>Изучим вашу задачу и покажем:</h4>
+        <ul class="contact-list">
+          <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-5"/></svg>где находится основная точка роста</li>
+          <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-5"/></svg>что необходимо изменить в продукте и позиционировании</li>
+          <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-5"/></svg>какие инструменты нужны именно вам</li>
+          <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-5"/></svg>как будет устроена реализация</li>
+          <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-5"/></svg>сколько времени и ресурсов потребуется</li>
+        </ul>
+      </div>
+      <div class="card reveal form-card">
+        <div class="form-success" id="formSuccess">Спасибо! Заявка отправлена — подготовим первичную концепцию в течение 24 часов и свяжемся с вами.</div>
+        <form id="leadForm" novalidate>
+          <div class="field"><input type="text" name="name" placeholder="Имя" required></div>
+          <div class="field"><input type="text" name="contact" placeholder="Telegram или телефон" required></div>
+          <div class="field"><input type="text" name="link" placeholder="Ссылка на сайт или социальные сети"></div>
+          <div class="field"><textarea name="business" placeholder="Краткое описание бизнеса"></textarea></div>
+          <div class="field"><textarea name="goal" placeholder="Главная задача на ближайшие 3–6 месяцев"></textarea></div>
+          <button type="submit" class="btn btn-primary">Получить концепцию за 24 часа
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </form>
+        <div class="form-note"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span>Мы не передаём ваши данные третьим лицам и используем их только для подготовки концепции.</span></div>
+        <div class="form-note"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Первичная концепция готовится в течение 24 часов после получения заявки.</span></div>
+      </div>
+    </div>
+    <p class="contact-foot reveal">После презентации вы решите, хотите ли передать реализацию нашей команде.</p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="foot">
+      <a href="#top" class="logo">INSIGHTERS</a>
+      <div class="foot-links">
+        <a href="#approach">Подход</a><a href="#services">Услуги</a><a href="#cases">Кейсы</a><a href="#team">О нас</a><a href="#contact">Контакты</a>
+      </div>
+      <div class="cr">© 2026 INSIGHTERS</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // mobile nav
+  var nav=document.getElementById('nav'),tg=document.getElementById('navToggle');
+  tg.addEventListener('click',function(){nav.classList.toggle('open')});
+  nav.querySelectorAll('.nav-links a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open')})});
+
+  // scroll reveal (once) — radial cards handled separately so they can replay
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:0.12});
+  document.querySelectorAll('.reveal:not(.pcell)').forEach(function(el){io.observe(el)});
+  // radial diagram: replay card animation each time it enters view (incl. reverse scroll)
+  (function(){
+    var rad=document.querySelector('.proc-radial');
+    if(!rad||!('IntersectionObserver' in window))return;
+    var cells=rad.querySelectorAll('.pcell');
+    var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduce){cells.forEach(function(c){c.classList.add('in')});return;}
+    var rio=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        var show=e.isIntersecting&&e.intersectionRatio>=0.15;
+        cells.forEach(function(c){c.classList.toggle('in',show)});
+      });
+    },{threshold:[0,0.15,0.4]});
+    rio.observe(rad);
+  })();
+
+
+  // ===== form handling =====
+  // Чтобы заявки приходили на почту/в Telegram — впишите сюда endpoint (например, Formspree: https://formspree.io/f/XXXX)
+  var FORM_ENDPOINT="";
+  var form=document.getElementById('leadForm'),ok=document.getElementById('formSuccess');
+  form.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    if(!form.name.value.trim()||!form.contact.value.trim()){
+      if(!form.name.value.trim())form.name.focus();else form.contact.focus();
+      return;
+    }
+    if(FORM_ENDPOINT){
+      var data=new FormData(form);
+      fetch(FORM_ENDPOINT,{method:'POST',body:data,headers:{'Accept':'application/json'}})
+        .then(function(){form.reset();ok.style.display='block';ok.scrollIntoView({behavior:'smooth',block:'center'})})
+        .catch(function(){alert('Не удалось отправить. Попробуйте ещё раз или напишите нам напрямую.')});
+    }else{
+      form.reset();ok.style.display='block';ok.scrollIntoView({behavior:'smooth',block:'center'});
+    }
+  });
+  // hero animation: net unfolds & folds into a cube; plays once in view, replays on scroll-back / reload
+  (function(){
+    var svg=document.getElementById('heroAnim');
+    var stage=document.getElementById('cubeStage');
+    var hasSMIL=svg&&svg.setCurrentTime;
+    var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduce){
+      if(hasSMIL){try{svg.setCurrentTime(9);svg.pauseAnimations();}catch(e){}}
+      if(stage){stage.classList.add('static');}
+      return;
+    }
+    function play(){
+      if(hasSMIL){try{svg.setCurrentTime(0);svg.unpauseAnimations();}catch(e){}}
+      if(stage){stage.classList.remove('run');void stage.offsetWidth;stage.classList.add('run');}
+    }
+    function rewind(){
+      if(hasSMIL){try{svg.setCurrentTime(0);svg.pauseAnimations();}catch(e){}}
+      if(stage){stage.classList.remove('run');}
+    }
+    rewind();
+    var target=svg||stage;
+    if(!target){return;}
+    if('IntersectionObserver' in window){
+      var hio=new IntersectionObserver(function(es){
+        es.forEach(function(e){ e.isIntersecting?play():rewind(); });
+      },{threshold:0.4});
+      hio.observe(target);
+    }else{ play(); }
+  })();
+</script>
+</body>
+</html>
